@@ -1,0 +1,950 @@
+2015-11-10 20:36:40,233|DEBUG|19964-MainThread|_http_log_request session:195| REQ: curl -g -i -X GET http://10.10.10.21:5000/v2.0 -H "Accept: application/json" -H "User-Agent: python-keystoneclient"
+2015-11-10 20:36:40,240|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:40,246|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2.0 HTTP/1.1" 200 337
+2015-11-10 20:36:40,253|DEBUG|19964-MainThread|_http_log_response session:224| RESP: [200] date: Tue, 10 Nov 2015 15:08:35 GMT vary: X-Auth-Token content-length: 337 content-type: application/json 
+RESP BODY: {"version": {"status": "stable", "updated": "2014-04-17T00:00:00Z", "media-types": [{"base": "application/json", "type": "application/vnd.openstack.identity-v2.0+json"}], "id": "v2.0", "links": [{"href": "http://10.10.10.21:5000/v2.0/", "rel": "self"}, {"href": "http://docs.openstack.org/", "type": "text/html", "rel": "describedby"}]}}
+
+2015-11-10 20:36:40,253|DEBUG|19964-MainThread|get_auth_ref v2:76| Making authentication request to http://10.10.10.21:5000/v2.0/tokens
+2015-11-10 20:36:40,255|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:40,355|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2.0/tokens HTTP/1.1" 200 3812
+2015-11-10 20:36:40,356|DEBUG|19964-MainThread|parse_date iso8601:171| Parsed 2015-11-10T16:08:35Z into {'tz_sign': None, 'second_fraction': None, 'hour': u'16', 'daydash': u'10', 'tz_hour': None, 'month': None, 'timezone': u'Z', 'second': u'35', 'tz_minute': None, 'year': u'2015', 'separator': u'T', 'monthdash': u'11', 'day': None, 'minute': u'08'} with default timezone <iso8601.iso8601.Utc object at 0x1c2dfd0>
+2015-11-10 20:36:40,356|DEBUG|19964-MainThread|to_int iso8601:127| Got u'2015' for 'year' with default None
+2015-11-10 20:36:40,356|DEBUG|19964-MainThread|to_int iso8601:127| Got u'11' for 'monthdash' with default None
+2015-11-10 20:36:40,356|DEBUG|19964-MainThread|to_int iso8601:127| Got 11 for 'month' with default 11
+2015-11-10 20:36:40,357|DEBUG|19964-MainThread|to_int iso8601:127| Got u'10' for 'daydash' with default None
+2015-11-10 20:36:40,357|DEBUG|19964-MainThread|to_int iso8601:127| Got 10 for 'day' with default 10
+2015-11-10 20:36:40,357|DEBUG|19964-MainThread|to_int iso8601:127| Got u'16' for 'hour' with default None
+2015-11-10 20:36:40,357|DEBUG|19964-MainThread|to_int iso8601:127| Got u'08' for 'minute' with default None
+2015-11-10 20:36:40,357|DEBUG|19964-MainThread|to_int iso8601:127| Got u'35' for 'second' with default None
+2015-11-10 20:36:40,364|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/networks.json -X POST -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"network": {"name": "net-0"}}'
+
+2015-11-10 20:36:40,365|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:40,453|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2.0/networks.json HTTP/1.1" 201 340
+2015-11-10 20:36:40,453|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:201 {'date': 'Tue, 10 Nov 2015 15:08:35 GMT', 'content-length': '340', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-265445f7-3822-4f9c-9450-ab9968aa85ec'} {"network": {"status": "ACTIVE", "subnets": [], "name": "net-0", "provider:physical_network": null, "router:external": false, "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "admin_state_up": true, "mtu": 0, "shared": false, "provider:network_type": "vxlan", "id": "90fb38ae-19b6-47e6-b622-35516b56b43e", "provider:segmentation_id": 1002}}
+
+2015-11-10 20:36:40,454|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/networks.json -X POST -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"network": {"name": "net-1"}}'
+
+2015-11-10 20:36:40,455|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:40,504|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2.0/networks.json HTTP/1.1" 201 340
+2015-11-10 20:36:40,504|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:201 {'date': 'Tue, 10 Nov 2015 15:08:35 GMT', 'content-length': '340', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-e9392968-a18a-4f7b-8da8-656195c71128'} {"network": {"status": "ACTIVE", "subnets": [], "name": "net-1", "provider:physical_network": null, "router:external": false, "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "admin_state_up": true, "mtu": 0, "shared": false, "provider:network_type": "vxlan", "id": "d2c9c08e-0799-4b5c-8125-8d7d9c8ab2fb", "provider:segmentation_id": 1003}}
+
+2015-11-10 20:36:40,505|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/networks.json -X POST -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"network": {"name": "net-2"}}'
+
+2015-11-10 20:36:40,506|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:40,588|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2.0/networks.json HTTP/1.1" 201 340
+2015-11-10 20:36:40,589|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:201 {'date': 'Tue, 10 Nov 2015 15:08:35 GMT', 'content-length': '340', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-8edab7c4-30a7-4d29-a0f9-04713f50d384'} {"network": {"status": "ACTIVE", "subnets": [], "name": "net-2", "provider:physical_network": null, "router:external": false, "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "admin_state_up": true, "mtu": 0, "shared": false, "provider:network_type": "vxlan", "id": "32980b6b-3807-4e9e-b87b-48119c527ab3", "provider:segmentation_id": 1004}}
+
+2015-11-10 20:36:40,589|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/networks.json -X POST -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"network": {"name": "net-3"}}'
+
+2015-11-10 20:36:40,590|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:40,645|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2.0/networks.json HTTP/1.1" 201 340
+2015-11-10 20:36:40,645|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:201 {'date': 'Tue, 10 Nov 2015 15:08:35 GMT', 'content-length': '340', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-b746d10f-f724-407d-a923-2cd96624a326'} {"network": {"status": "ACTIVE", "subnets": [], "name": "net-3", "provider:physical_network": null, "router:external": false, "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "admin_state_up": true, "mtu": 0, "shared": false, "provider:network_type": "vxlan", "id": "cdccf7c7-5e7a-4732-a9bf-7d7b19eb8015", "provider:segmentation_id": 1005}}
+
+2015-11-10 20:36:40,645|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/networks.json -X POST -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"network": {"name": "net-4"}}'
+
+2015-11-10 20:36:40,646|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:40,700|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2.0/networks.json HTTP/1.1" 201 340
+2015-11-10 20:36:40,701|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:201 {'date': 'Tue, 10 Nov 2015 15:08:35 GMT', 'content-length': '340', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-4a4f570d-80a8-4975-8d41-756cd54f4b37'} {"network": {"status": "ACTIVE", "subnets": [], "name": "net-4", "provider:physical_network": null, "router:external": false, "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "admin_state_up": true, "mtu": 0, "shared": false, "provider:network_type": "vxlan", "id": "c077bfbb-71a8-43da-be9d-75e5fc759432", "provider:segmentation_id": 1006}}
+
+2015-11-10 20:36:40,701|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/networks.json -X POST -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"network": {"name": "net-5"}}'
+
+2015-11-10 20:36:40,702|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:40,753|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2.0/networks.json HTTP/1.1" 201 340
+2015-11-10 20:36:40,753|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:201 {'date': 'Tue, 10 Nov 2015 15:08:35 GMT', 'content-length': '340', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-01a5cb86-0228-4116-876c-6aa2e1b13b95'} {"network": {"status": "ACTIVE", "subnets": [], "name": "net-5", "provider:physical_network": null, "router:external": false, "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "admin_state_up": true, "mtu": 0, "shared": false, "provider:network_type": "vxlan", "id": "ef5a0e5c-0c2c-4070-a1da-7a1c2de4f5ea", "provider:segmentation_id": 1007}}
+
+2015-11-10 20:36:40,753|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/networks.json -X POST -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"network": {"name": "net-6"}}'
+
+2015-11-10 20:36:40,754|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:40,833|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2.0/networks.json HTTP/1.1" 201 340
+2015-11-10 20:36:40,833|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:201 {'date': 'Tue, 10 Nov 2015 15:08:35 GMT', 'content-length': '340', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-e3372aa6-98f2-4381-9459-f9fbb8adfd66'} {"network": {"status": "ACTIVE", "subnets": [], "name": "net-6", "provider:physical_network": null, "router:external": false, "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "admin_state_up": true, "mtu": 0, "shared": false, "provider:network_type": "vxlan", "id": "92714a62-700b-4ea4-8586-9f2d6c413672", "provider:segmentation_id": 1008}}
+
+2015-11-10 20:36:40,834|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/networks.json -X POST -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"network": {"name": "net-7"}}'
+
+2015-11-10 20:36:40,834|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:40,889|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2.0/networks.json HTTP/1.1" 201 340
+2015-11-10 20:36:40,890|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:201 {'date': 'Tue, 10 Nov 2015 15:08:35 GMT', 'content-length': '340', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-6e32a02f-049f-4847-90b3-4cfa038f0f19'} {"network": {"status": "ACTIVE", "subnets": [], "name": "net-7", "provider:physical_network": null, "router:external": false, "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "admin_state_up": true, "mtu": 0, "shared": false, "provider:network_type": "vxlan", "id": "7be57903-b86c-48d7-b042-568231c78329", "provider:segmentation_id": 1009}}
+
+2015-11-10 20:36:40,890|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/networks.json -X POST -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"network": {"name": "net-8"}}'
+
+2015-11-10 20:36:40,891|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:40,944|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2.0/networks.json HTTP/1.1" 201 340
+2015-11-10 20:36:40,945|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:201 {'date': 'Tue, 10 Nov 2015 15:08:35 GMT', 'content-length': '340', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-128ead34-4066-4c43-9436-6a98318e1f14'} {"network": {"status": "ACTIVE", "subnets": [], "name": "net-8", "provider:physical_network": null, "router:external": false, "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "admin_state_up": true, "mtu": 0, "shared": false, "provider:network_type": "vxlan", "id": "ff9be446-ec42-418d-96ab-2997baad2fd3", "provider:segmentation_id": 1010}}
+
+2015-11-10 20:36:40,945|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/networks.json -X POST -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"network": {"name": "net-9"}}'
+
+2015-11-10 20:36:40,946|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:41,001|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2.0/networks.json HTTP/1.1" 201 340
+2015-11-10 20:36:41,001|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:201 {'date': 'Tue, 10 Nov 2015 15:08:35 GMT', 'content-length': '340', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-8745eac6-3307-4362-a782-e299d85677b3'} {"network": {"status": "ACTIVE", "subnets": [], "name": "net-9", "provider:physical_network": null, "router:external": false, "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "admin_state_up": true, "mtu": 0, "shared": false, "provider:network_type": "vxlan", "id": "81112db6-ebaa-4750-a024-20e8b35c6cb0", "provider:segmentation_id": 1011}}
+
+2015-11-10 20:36:41,002|DEBUG|19964-MainThread|generate_cidr network:55| CIDR generated: 10.20.0.0/24
+2015-11-10 20:36:41,002|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/subnets.json -X POST -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"subnet": {"network_id": "90fb38ae-19b6-47e6-b622-35516b56b43e", "ip_version": 4, "cidr": "10.20.0.0/24", "name": "subnet-0"}}'
+
+2015-11-10 20:36:41,003|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:41,105|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2.0/subnets.json HTTP/1.1" 201 452
+2015-11-10 20:36:41,106|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:201 {'date': 'Tue, 10 Nov 2015 15:08:35 GMT', 'content-length': '452', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-8bb8108b-04b0-4438-9d18-d253ae76ec03'} {"subnet": {"name": "subnet-0", "enable_dhcp": true, "network_id": "90fb38ae-19b6-47e6-b622-35516b56b43e", "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "dns_nameservers": [], "gateway_ip": "10.20.0.1", "ipv6_ra_mode": null, "allocation_pools": [{"start": "10.20.0.2", "end": "10.20.0.254"}], "host_routes": [], "ip_version": 4, "ipv6_address_mode": null, "cidr": "10.20.0.0/24", "id": "e2e480fb-0c00-45ae-a922-fb2fac7b99ab", "subnetpool_id": null}}
+
+2015-11-10 20:36:41,106|DEBUG|19964-MainThread|generate_cidr network:55| CIDR generated: 10.20.1.0/24
+2015-11-10 20:36:41,106|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/subnets.json -X POST -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"subnet": {"network_id": "d2c9c08e-0799-4b5c-8125-8d7d9c8ab2fb", "ip_version": 4, "cidr": "10.20.1.0/24", "name": "subnet-1"}}'
+
+2015-11-10 20:36:41,107|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:41,205|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2.0/subnets.json HTTP/1.1" 201 452
+2015-11-10 20:36:41,205|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:201 {'date': 'Tue, 10 Nov 2015 15:08:36 GMT', 'content-length': '452', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-b7c87c3f-110b-47fd-bf19-6bc9ec83a030'} {"subnet": {"name": "subnet-1", "enable_dhcp": true, "network_id": "d2c9c08e-0799-4b5c-8125-8d7d9c8ab2fb", "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "dns_nameservers": [], "gateway_ip": "10.20.1.1", "ipv6_ra_mode": null, "allocation_pools": [{"start": "10.20.1.2", "end": "10.20.1.254"}], "host_routes": [], "ip_version": 4, "ipv6_address_mode": null, "cidr": "10.20.1.0/24", "id": "7f04af37-2f1d-41ca-b761-02bb76c5cdc6", "subnetpool_id": null}}
+
+2015-11-10 20:36:41,205|DEBUG|19964-MainThread|generate_cidr network:55| CIDR generated: 10.20.2.0/24
+2015-11-10 20:36:41,206|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/subnets.json -X POST -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"subnet": {"network_id": "32980b6b-3807-4e9e-b87b-48119c527ab3", "ip_version": 4, "cidr": "10.20.2.0/24", "name": "subnet-2"}}'
+
+2015-11-10 20:36:41,206|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:41,313|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2.0/subnets.json HTTP/1.1" 201 452
+2015-11-10 20:36:41,313|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:201 {'date': 'Tue, 10 Nov 2015 15:08:36 GMT', 'content-length': '452', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-3d24006b-e0fc-4c3d-ac73-b6db3aafc73e'} {"subnet": {"name": "subnet-2", "enable_dhcp": true, "network_id": "32980b6b-3807-4e9e-b87b-48119c527ab3", "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "dns_nameservers": [], "gateway_ip": "10.20.2.1", "ipv6_ra_mode": null, "allocation_pools": [{"start": "10.20.2.2", "end": "10.20.2.254"}], "host_routes": [], "ip_version": 4, "ipv6_address_mode": null, "cidr": "10.20.2.0/24", "id": "7bbe29a8-59e3-4766-a82d-e88867bc88d7", "subnetpool_id": null}}
+
+2015-11-10 20:36:41,314|DEBUG|19964-MainThread|generate_cidr network:55| CIDR generated: 10.20.3.0/24
+2015-11-10 20:36:41,314|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/subnets.json -X POST -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"subnet": {"network_id": "cdccf7c7-5e7a-4732-a9bf-7d7b19eb8015", "ip_version": 4, "cidr": "10.20.3.0/24", "name": "subnet-3"}}'
+
+2015-11-10 20:36:41,315|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:41,416|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2.0/subnets.json HTTP/1.1" 201 452
+2015-11-10 20:36:41,417|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:201 {'date': 'Tue, 10 Nov 2015 15:08:36 GMT', 'content-length': '452', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-b9adf7a3-ac84-4fd8-9cda-8818d0a276b8'} {"subnet": {"name": "subnet-3", "enable_dhcp": true, "network_id": "cdccf7c7-5e7a-4732-a9bf-7d7b19eb8015", "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "dns_nameservers": [], "gateway_ip": "10.20.3.1", "ipv6_ra_mode": null, "allocation_pools": [{"start": "10.20.3.2", "end": "10.20.3.254"}], "host_routes": [], "ip_version": 4, "ipv6_address_mode": null, "cidr": "10.20.3.0/24", "id": "0f86b260-803a-4c7a-b7e1-1d64fa26af82", "subnetpool_id": null}}
+
+2015-11-10 20:36:41,417|DEBUG|19964-MainThread|generate_cidr network:55| CIDR generated: 10.20.4.0/24
+2015-11-10 20:36:41,418|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/subnets.json -X POST -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"subnet": {"network_id": "c077bfbb-71a8-43da-be9d-75e5fc759432", "ip_version": 4, "cidr": "10.20.4.0/24", "name": "subnet-4"}}'
+
+2015-11-10 20:36:41,419|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:41,770|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2.0/subnets.json HTTP/1.1" 201 452
+2015-11-10 20:36:41,771|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:201 {'date': 'Tue, 10 Nov 2015 15:08:36 GMT', 'content-length': '452', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-4d7ac2bf-41e6-4e99-8bf0-74c67c3da619'} {"subnet": {"name": "subnet-4", "enable_dhcp": true, "network_id": "c077bfbb-71a8-43da-be9d-75e5fc759432", "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "dns_nameservers": [], "gateway_ip": "10.20.4.1", "ipv6_ra_mode": null, "allocation_pools": [{"start": "10.20.4.2", "end": "10.20.4.254"}], "host_routes": [], "ip_version": 4, "ipv6_address_mode": null, "cidr": "10.20.4.0/24", "id": "19148108-c192-4d96-be0d-d525c3b995be", "subnetpool_id": null}}
+
+2015-11-10 20:36:41,771|DEBUG|19964-MainThread|generate_cidr network:55| CIDR generated: 10.20.5.0/24
+2015-11-10 20:36:41,772|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/subnets.json -X POST -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"subnet": {"network_id": "ef5a0e5c-0c2c-4070-a1da-7a1c2de4f5ea", "ip_version": 4, "cidr": "10.20.5.0/24", "name": "subnet-5"}}'
+
+2015-11-10 20:36:41,773|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:41,878|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2.0/subnets.json HTTP/1.1" 201 452
+2015-11-10 20:36:41,879|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:201 {'date': 'Tue, 10 Nov 2015 15:08:36 GMT', 'content-length': '452', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-0698dc77-2e5d-4c54-bb3b-c551e58508c1'} {"subnet": {"name": "subnet-5", "enable_dhcp": true, "network_id": "ef5a0e5c-0c2c-4070-a1da-7a1c2de4f5ea", "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "dns_nameservers": [], "gateway_ip": "10.20.5.1", "ipv6_ra_mode": null, "allocation_pools": [{"start": "10.20.5.2", "end": "10.20.5.254"}], "host_routes": [], "ip_version": 4, "ipv6_address_mode": null, "cidr": "10.20.5.0/24", "id": "59b0adcc-ddca-4c19-a731-c7365c5aa109", "subnetpool_id": null}}
+
+2015-11-10 20:36:41,879|DEBUG|19964-MainThread|generate_cidr network:55| CIDR generated: 10.20.6.0/24
+2015-11-10 20:36:41,879|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/subnets.json -X POST -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"subnet": {"network_id": "92714a62-700b-4ea4-8586-9f2d6c413672", "ip_version": 4, "cidr": "10.20.6.0/24", "name": "subnet-6"}}'
+
+2015-11-10 20:36:41,880|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:41,993|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2.0/subnets.json HTTP/1.1" 201 452
+2015-11-10 20:36:41,994|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:201 {'date': 'Tue, 10 Nov 2015 15:08:36 GMT', 'content-length': '452', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-9e2c82be-e6d8-4573-8b54-5497a3bb8844'} {"subnet": {"name": "subnet-6", "enable_dhcp": true, "network_id": "92714a62-700b-4ea4-8586-9f2d6c413672", "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "dns_nameservers": [], "gateway_ip": "10.20.6.1", "ipv6_ra_mode": null, "allocation_pools": [{"start": "10.20.6.2", "end": "10.20.6.254"}], "host_routes": [], "ip_version": 4, "ipv6_address_mode": null, "cidr": "10.20.6.0/24", "id": "1daf190d-1cc3-4477-8ca2-8acf21146605", "subnetpool_id": null}}
+
+2015-11-10 20:36:41,994|DEBUG|19964-MainThread|generate_cidr network:55| CIDR generated: 10.20.7.0/24
+2015-11-10 20:36:41,995|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/subnets.json -X POST -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"subnet": {"network_id": "7be57903-b86c-48d7-b042-568231c78329", "ip_version": 4, "cidr": "10.20.7.0/24", "name": "subnet-7"}}'
+
+2015-11-10 20:36:41,996|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:42,098|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2.0/subnets.json HTTP/1.1" 201 452
+2015-11-10 20:36:42,098|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:201 {'date': 'Tue, 10 Nov 2015 15:08:36 GMT', 'content-length': '452', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-14cc73ef-d6fe-457d-880f-dc07831f5ef8'} {"subnet": {"name": "subnet-7", "enable_dhcp": true, "network_id": "7be57903-b86c-48d7-b042-568231c78329", "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "dns_nameservers": [], "gateway_ip": "10.20.7.1", "ipv6_ra_mode": null, "allocation_pools": [{"start": "10.20.7.2", "end": "10.20.7.254"}], "host_routes": [], "ip_version": 4, "ipv6_address_mode": null, "cidr": "10.20.7.0/24", "id": "dfedca7d-34b5-4c38-add7-a6a0d6185a5e", "subnetpool_id": null}}
+
+2015-11-10 20:36:42,099|DEBUG|19964-MainThread|generate_cidr network:55| CIDR generated: 10.20.8.0/24
+2015-11-10 20:36:42,099|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/subnets.json -X POST -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"subnet": {"network_id": "ff9be446-ec42-418d-96ab-2997baad2fd3", "ip_version": 4, "cidr": "10.20.8.0/24", "name": "subnet-8"}}'
+
+2015-11-10 20:36:42,100|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:42,201|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2.0/subnets.json HTTP/1.1" 201 452
+2015-11-10 20:36:42,202|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:201 {'date': 'Tue, 10 Nov 2015 15:08:37 GMT', 'content-length': '452', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-9db9659d-c653-4df0-aac6-477000edc944'} {"subnet": {"name": "subnet-8", "enable_dhcp": true, "network_id": "ff9be446-ec42-418d-96ab-2997baad2fd3", "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "dns_nameservers": [], "gateway_ip": "10.20.8.1", "ipv6_ra_mode": null, "allocation_pools": [{"start": "10.20.8.2", "end": "10.20.8.254"}], "host_routes": [], "ip_version": 4, "ipv6_address_mode": null, "cidr": "10.20.8.0/24", "id": "66045977-f796-43e6-8896-e5134dcc7973", "subnetpool_id": null}}
+
+2015-11-10 20:36:42,202|DEBUG|19964-MainThread|generate_cidr network:55| CIDR generated: 10.20.9.0/24
+2015-11-10 20:36:42,202|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/subnets.json -X POST -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"subnet": {"network_id": "81112db6-ebaa-4750-a024-20e8b35c6cb0", "ip_version": 4, "cidr": "10.20.9.0/24", "name": "subnet-9"}}'
+
+2015-11-10 20:36:42,203|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:42,309|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2.0/subnets.json HTTP/1.1" 201 452
+2015-11-10 20:36:42,310|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:201 {'date': 'Tue, 10 Nov 2015 15:08:37 GMT', 'content-length': '452', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-015d322e-1d86-45de-91ee-0356d2d7fc13'} {"subnet": {"name": "subnet-9", "enable_dhcp": true, "network_id": "81112db6-ebaa-4750-a024-20e8b35c6cb0", "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "dns_nameservers": [], "gateway_ip": "10.20.9.1", "ipv6_ra_mode": null, "allocation_pools": [{"start": "10.20.9.2", "end": "10.20.9.254"}], "host_routes": [], "ip_version": 4, "ipv6_address_mode": null, "cidr": "10.20.9.0/24", "id": "d8aca88b-a20f-41bd-891d-db49108fecf4", "subnetpool_id": null}}
+
+2015-11-10 20:36:42,310|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers.json -X POST -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"router": {"external_gateway_info": {"network_id": "93bf9a6d-ef95-499f-973f-742e14f444f2"}, "name": "router-0"}}'
+
+2015-11-10 20:36:42,311|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:42,432|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2.0/routers.json HTTP/1.1" 201 428
+2015-11-10 20:36:42,433|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:201 {'date': 'Tue, 10 Nov 2015 15:08:37 GMT', 'content-length': '428', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-be23af20-1030-43a5-9aa5-14f59636f49a'} {"router": {"status": "ACTIVE", "external_gateway_info": {"network_id": "93bf9a6d-ef95-499f-973f-742e14f444f2", "enable_snat": true, "external_fixed_ips": [{"subnet_id": "d290df1d-8f46-46e9-afdc-e921e6adfa8f", "ip_address": "1.1.2.239"}]}, "name": "router-0", "admin_state_up": true, "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "distributed": false, "routes": [], "ha": false, "id": "0cc4dbb0-786f-4127-8ca2-5778411b5a96"}}
+
+2015-11-10 20:36:42,433|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers.json -X POST -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"router": {"external_gateway_info": {"network_id": "93bf9a6d-ef95-499f-973f-742e14f444f2"}, "name": "router-1"}}'
+
+2015-11-10 20:36:42,434|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:42,571|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2.0/routers.json HTTP/1.1" 201 428
+2015-11-10 20:36:42,572|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:201 {'date': 'Tue, 10 Nov 2015 15:08:37 GMT', 'content-length': '428', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-16076999-8340-431c-a410-8a2d49b785d1'} {"router": {"status": "ACTIVE", "external_gateway_info": {"network_id": "93bf9a6d-ef95-499f-973f-742e14f444f2", "enable_snat": true, "external_fixed_ips": [{"subnet_id": "d290df1d-8f46-46e9-afdc-e921e6adfa8f", "ip_address": "1.1.2.240"}]}, "name": "router-1", "admin_state_up": true, "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "distributed": false, "routes": [], "ha": false, "id": "b1f4fa64-f08e-4279-9b10-87a055406399"}}
+
+2015-11-10 20:36:42,572|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers.json -X POST -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"router": {"external_gateway_info": {"network_id": "93bf9a6d-ef95-499f-973f-742e14f444f2"}, "name": "router-2"}}'
+
+2015-11-10 20:36:42,573|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:42,695|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2.0/routers.json HTTP/1.1" 201 428
+2015-11-10 20:36:42,696|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:201 {'date': 'Tue, 10 Nov 2015 15:08:37 GMT', 'content-length': '428', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-49699597-5fe2-4bba-9dfd-00e259d0fa85'} {"router": {"status": "ACTIVE", "external_gateway_info": {"network_id": "93bf9a6d-ef95-499f-973f-742e14f444f2", "enable_snat": true, "external_fixed_ips": [{"subnet_id": "d290df1d-8f46-46e9-afdc-e921e6adfa8f", "ip_address": "1.1.2.241"}]}, "name": "router-2", "admin_state_up": true, "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "distributed": false, "routes": [], "ha": false, "id": "fab58565-bf58-4e95-86f2-20f4c2e77b76"}}
+
+2015-11-10 20:36:42,696|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers.json -X POST -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"router": {"external_gateway_info": {"network_id": "93bf9a6d-ef95-499f-973f-742e14f444f2"}, "name": "router-3"}}'
+
+2015-11-10 20:36:42,697|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:43,063|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2.0/routers.json HTTP/1.1" 201 428
+2015-11-10 20:36:43,064|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:201 {'date': 'Tue, 10 Nov 2015 15:08:37 GMT', 'content-length': '428', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-fe0612c3-4529-4714-82c0-674b9ad84dc6'} {"router": {"status": "ACTIVE", "external_gateway_info": {"network_id": "93bf9a6d-ef95-499f-973f-742e14f444f2", "enable_snat": true, "external_fixed_ips": [{"subnet_id": "d290df1d-8f46-46e9-afdc-e921e6adfa8f", "ip_address": "1.1.2.242"}]}, "name": "router-3", "admin_state_up": true, "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "distributed": false, "routes": [], "ha": false, "id": "cfe762a7-a3d7-4222-a47c-7082cf3338a6"}}
+
+2015-11-10 20:36:43,064|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers.json -X POST -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"router": {"external_gateway_info": {"network_id": "93bf9a6d-ef95-499f-973f-742e14f444f2"}, "name": "router-4"}}'
+
+2015-11-10 20:36:43,065|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:43,180|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2.0/routers.json HTTP/1.1" 201 428
+2015-11-10 20:36:43,180|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:201 {'date': 'Tue, 10 Nov 2015 15:08:38 GMT', 'content-length': '428', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-a69acd58-7698-4397-87b9-8f1aa59abd45'} {"router": {"status": "ACTIVE", "external_gateway_info": {"network_id": "93bf9a6d-ef95-499f-973f-742e14f444f2", "enable_snat": true, "external_fixed_ips": [{"subnet_id": "d290df1d-8f46-46e9-afdc-e921e6adfa8f", "ip_address": "1.1.2.243"}]}, "name": "router-4", "admin_state_up": true, "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "distributed": false, "routes": [], "ha": false, "id": "1760e9dd-899e-452c-8f35-656e48da595a"}}
+
+2015-11-10 20:36:43,181|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers.json -X POST -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"router": {"external_gateway_info": {"network_id": "93bf9a6d-ef95-499f-973f-742e14f444f2"}, "name": "router-5"}}'
+
+2015-11-10 20:36:43,182|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:43,300|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2.0/routers.json HTTP/1.1" 201 428
+2015-11-10 20:36:43,301|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:201 {'date': 'Tue, 10 Nov 2015 15:08:38 GMT', 'content-length': '428', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-65df9569-982c-4bc0-93e8-33eacc258346'} {"router": {"status": "ACTIVE", "external_gateway_info": {"network_id": "93bf9a6d-ef95-499f-973f-742e14f444f2", "enable_snat": true, "external_fixed_ips": [{"subnet_id": "d290df1d-8f46-46e9-afdc-e921e6adfa8f", "ip_address": "1.1.2.244"}]}, "name": "router-5", "admin_state_up": true, "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "distributed": false, "routes": [], "ha": false, "id": "b69ececf-b66d-4094-a5df-cba2fd7ded4b"}}
+
+2015-11-10 20:36:43,301|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers.json -X POST -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"router": {"external_gateway_info": {"network_id": "93bf9a6d-ef95-499f-973f-742e14f444f2"}, "name": "router-6"}}'
+
+2015-11-10 20:36:43,302|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:43,415|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2.0/routers.json HTTP/1.1" 201 428
+2015-11-10 20:36:43,415|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:201 {'date': 'Tue, 10 Nov 2015 15:08:38 GMT', 'content-length': '428', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-90aced05-2a1b-4d01-bf1a-cc4afc682f12'} {"router": {"status": "ACTIVE", "external_gateway_info": {"network_id": "93bf9a6d-ef95-499f-973f-742e14f444f2", "enable_snat": true, "external_fixed_ips": [{"subnet_id": "d290df1d-8f46-46e9-afdc-e921e6adfa8f", "ip_address": "1.1.2.245"}]}, "name": "router-6", "admin_state_up": true, "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "distributed": false, "routes": [], "ha": false, "id": "59fe7952-189d-4e21-8676-bbfaa4b3fd3a"}}
+
+2015-11-10 20:36:43,416|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers.json -X POST -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"router": {"external_gateway_info": {"network_id": "93bf9a6d-ef95-499f-973f-742e14f444f2"}, "name": "router-7"}}'
+
+2015-11-10 20:36:43,417|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:43,527|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2.0/routers.json HTTP/1.1" 201 428
+2015-11-10 20:36:43,528|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:201 {'date': 'Tue, 10 Nov 2015 15:08:38 GMT', 'content-length': '428', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-d6e828e4-7e1c-4338-8c96-f4402750d6ef'} {"router": {"status": "ACTIVE", "external_gateway_info": {"network_id": "93bf9a6d-ef95-499f-973f-742e14f444f2", "enable_snat": true, "external_fixed_ips": [{"subnet_id": "d290df1d-8f46-46e9-afdc-e921e6adfa8f", "ip_address": "1.1.2.246"}]}, "name": "router-7", "admin_state_up": true, "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "distributed": false, "routes": [], "ha": false, "id": "fe643a6e-0412-48db-80f2-bcb353d7d7c9"}}
+
+2015-11-10 20:36:43,528|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers.json -X POST -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"router": {"external_gateway_info": {"network_id": "93bf9a6d-ef95-499f-973f-742e14f444f2"}, "name": "router-8"}}'
+
+2015-11-10 20:36:43,529|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:43,648|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2.0/routers.json HTTP/1.1" 201 428
+2015-11-10 20:36:43,649|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:201 {'date': 'Tue, 10 Nov 2015 15:08:38 GMT', 'content-length': '428', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-9fe419c4-b3dd-4a03-8766-09e4aa28fa00'} {"router": {"status": "ACTIVE", "external_gateway_info": {"network_id": "93bf9a6d-ef95-499f-973f-742e14f444f2", "enable_snat": true, "external_fixed_ips": [{"subnet_id": "d290df1d-8f46-46e9-afdc-e921e6adfa8f", "ip_address": "1.1.2.247"}]}, "name": "router-8", "admin_state_up": true, "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "distributed": false, "routes": [], "ha": false, "id": "49788461-0962-44c4-aacb-fb3b91a29fae"}}
+
+2015-11-10 20:36:43,649|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers.json -X POST -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"router": {"external_gateway_info": {"network_id": "93bf9a6d-ef95-499f-973f-742e14f444f2"}, "name": "router-9"}}'
+
+2015-11-10 20:36:43,650|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:43,769|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2.0/routers.json HTTP/1.1" 201 428
+2015-11-10 20:36:43,769|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:201 {'date': 'Tue, 10 Nov 2015 15:08:38 GMT', 'content-length': '428', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-ae4f8ef3-e80a-4f20-b6f2-36d564767b46'} {"router": {"status": "ACTIVE", "external_gateway_info": {"network_id": "93bf9a6d-ef95-499f-973f-742e14f444f2", "enable_snat": true, "external_fixed_ips": [{"subnet_id": "d290df1d-8f46-46e9-afdc-e921e6adfa8f", "ip_address": "1.1.2.248"}]}, "name": "router-9", "admin_state_up": true, "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "distributed": false, "routes": [], "ha": false, "id": "8681065b-d9fa-4abc-baa5-8db4020cfcc0"}}
+
+2015-11-10 20:36:43,769|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/0cc4dbb0-786f-4127-8ca2-5778411b5a96/add_router_interface.json -X PUT -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"subnet_id": "e2e480fb-0c00-45ae-a922-fb2fac7b99ab"}'
+
+2015-11-10 20:36:43,770|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:43,980|DEBUG|19964-MainThread|_make_request connectionpool:360| "PUT /v2.0/routers/0cc4dbb0-786f-4127-8ca2-5778411b5a96/add_router_interface.json HTTP/1.1" 200 255
+2015-11-10 20:36:43,981|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:200 {'date': 'Tue, 10 Nov 2015 15:08:38 GMT', 'content-length': '255', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-76c97c76-eb0f-4061-9d02-b42df05f25b3'} {"subnet_id": "e2e480fb-0c00-45ae-a922-fb2fac7b99ab", "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "subnet_ids": ["e2e480fb-0c00-45ae-a922-fb2fac7b99ab"], "port_id": "106be611-3c88-4ff3-a760-7a4776747b12", "id": "0cc4dbb0-786f-4127-8ca2-5778411b5a96"}
+
+2015-11-10 20:36:43,981|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/b1f4fa64-f08e-4279-9b10-87a055406399/add_router_interface.json -X PUT -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"subnet_id": "7f04af37-2f1d-41ca-b761-02bb76c5cdc6"}'
+
+2015-11-10 20:36:43,982|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:44,177|DEBUG|19964-MainThread|_make_request connectionpool:360| "PUT /v2.0/routers/b1f4fa64-f08e-4279-9b10-87a055406399/add_router_interface.json HTTP/1.1" 200 255
+2015-11-10 20:36:44,177|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:200 {'date': 'Tue, 10 Nov 2015 15:08:39 GMT', 'content-length': '255', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-959f0878-b32c-4b4d-b2f7-17b0a4469747'} {"subnet_id": "7f04af37-2f1d-41ca-b761-02bb76c5cdc6", "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "subnet_ids": ["7f04af37-2f1d-41ca-b761-02bb76c5cdc6"], "port_id": "1d884f30-369a-47ae-8cb1-db95fefb026c", "id": "b1f4fa64-f08e-4279-9b10-87a055406399"}
+
+2015-11-10 20:36:44,178|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/fab58565-bf58-4e95-86f2-20f4c2e77b76/add_router_interface.json -X PUT -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"subnet_id": "7bbe29a8-59e3-4766-a82d-e88867bc88d7"}'
+
+2015-11-10 20:36:44,178|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:44,595|DEBUG|19964-MainThread|_make_request connectionpool:360| "PUT /v2.0/routers/fab58565-bf58-4e95-86f2-20f4c2e77b76/add_router_interface.json HTTP/1.1" 200 255
+2015-11-10 20:36:44,596|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:200 {'date': 'Tue, 10 Nov 2015 15:08:39 GMT', 'content-length': '255', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-78d90c44-1e2f-4c94-9dd4-1bdb21b99f40'} {"subnet_id": "7bbe29a8-59e3-4766-a82d-e88867bc88d7", "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "subnet_ids": ["7bbe29a8-59e3-4766-a82d-e88867bc88d7"], "port_id": "a27ac465-4a1c-41ad-a9cf-64d664eb99f2", "id": "fab58565-bf58-4e95-86f2-20f4c2e77b76"}
+
+2015-11-10 20:36:44,596|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/cfe762a7-a3d7-4222-a47c-7082cf3338a6/add_router_interface.json -X PUT -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"subnet_id": "0f86b260-803a-4c7a-b7e1-1d64fa26af82"}'
+
+2015-11-10 20:36:44,597|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:44,775|DEBUG|19964-MainThread|_make_request connectionpool:360| "PUT /v2.0/routers/cfe762a7-a3d7-4222-a47c-7082cf3338a6/add_router_interface.json HTTP/1.1" 200 255
+2015-11-10 20:36:44,776|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:200 {'date': 'Tue, 10 Nov 2015 15:08:39 GMT', 'content-length': '255', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-34297383-f9e7-402e-a7fa-214ba0627e2e'} {"subnet_id": "0f86b260-803a-4c7a-b7e1-1d64fa26af82", "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "subnet_ids": ["0f86b260-803a-4c7a-b7e1-1d64fa26af82"], "port_id": "213cffa8-a825-4754-a4af-ea56a186a903", "id": "cfe762a7-a3d7-4222-a47c-7082cf3338a6"}
+
+2015-11-10 20:36:44,776|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/1760e9dd-899e-452c-8f35-656e48da595a/add_router_interface.json -X PUT -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"subnet_id": "19148108-c192-4d96-be0d-d525c3b995be"}'
+
+2015-11-10 20:36:44,778|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:44,977|DEBUG|19964-MainThread|_make_request connectionpool:360| "PUT /v2.0/routers/1760e9dd-899e-452c-8f35-656e48da595a/add_router_interface.json HTTP/1.1" 200 255
+2015-11-10 20:36:44,977|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:200 {'date': 'Tue, 10 Nov 2015 15:08:39 GMT', 'content-length': '255', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-51daeb8f-a7c3-4d22-94cb-80a89954f9f5'} {"subnet_id": "19148108-c192-4d96-be0d-d525c3b995be", "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "subnet_ids": ["19148108-c192-4d96-be0d-d525c3b995be"], "port_id": "32f96f3f-ce7a-4440-9e84-f0d183fcdb7c", "id": "1760e9dd-899e-452c-8f35-656e48da595a"}
+
+2015-11-10 20:36:44,978|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/b69ececf-b66d-4094-a5df-cba2fd7ded4b/add_router_interface.json -X PUT -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"subnet_id": "59b0adcc-ddca-4c19-a731-c7365c5aa109"}'
+
+2015-11-10 20:36:44,979|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:45,180|DEBUG|19964-MainThread|_make_request connectionpool:360| "PUT /v2.0/routers/b69ececf-b66d-4094-a5df-cba2fd7ded4b/add_router_interface.json HTTP/1.1" 200 255
+2015-11-10 20:36:45,181|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:200 {'date': 'Tue, 10 Nov 2015 15:08:40 GMT', 'content-length': '255', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-9b89445f-535c-4086-8d7e-6fe39c407628'} {"subnet_id": "59b0adcc-ddca-4c19-a731-c7365c5aa109", "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "subnet_ids": ["59b0adcc-ddca-4c19-a731-c7365c5aa109"], "port_id": "65aa72a3-31c9-40d8-bdaf-3f177bda1921", "id": "b69ececf-b66d-4094-a5df-cba2fd7ded4b"}
+
+2015-11-10 20:36:45,181|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/59fe7952-189d-4e21-8676-bbfaa4b3fd3a/add_router_interface.json -X PUT -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"subnet_id": "1daf190d-1cc3-4477-8ca2-8acf21146605"}'
+
+2015-11-10 20:36:45,183|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:45,373|DEBUG|19964-MainThread|_make_request connectionpool:360| "PUT /v2.0/routers/59fe7952-189d-4e21-8676-bbfaa4b3fd3a/add_router_interface.json HTTP/1.1" 200 255
+2015-11-10 20:36:45,373|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:200 {'date': 'Tue, 10 Nov 2015 15:08:40 GMT', 'content-length': '255', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-41622efe-5a13-47e1-b118-f5fada55de3a'} {"subnet_id": "1daf190d-1cc3-4477-8ca2-8acf21146605", "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "subnet_ids": ["1daf190d-1cc3-4477-8ca2-8acf21146605"], "port_id": "40dae782-1467-4059-87fd-5815522ffd05", "id": "59fe7952-189d-4e21-8676-bbfaa4b3fd3a"}
+
+2015-11-10 20:36:45,374|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/fe643a6e-0412-48db-80f2-bcb353d7d7c9/add_router_interface.json -X PUT -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"subnet_id": "dfedca7d-34b5-4c38-add7-a6a0d6185a5e"}'
+
+2015-11-10 20:36:45,375|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:45,668|DEBUG|19964-MainThread|_make_request connectionpool:360| "PUT /v2.0/routers/fe643a6e-0412-48db-80f2-bcb353d7d7c9/add_router_interface.json HTTP/1.1" 200 255
+2015-11-10 20:36:45,669|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:200 {'date': 'Tue, 10 Nov 2015 15:08:40 GMT', 'content-length': '255', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-25eee73a-d788-4c65-9566-970740692f70'} {"subnet_id": "dfedca7d-34b5-4c38-add7-a6a0d6185a5e", "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "subnet_ids": ["dfedca7d-34b5-4c38-add7-a6a0d6185a5e"], "port_id": "d9f613c6-f237-4613-914f-6474cce3d022", "id": "fe643a6e-0412-48db-80f2-bcb353d7d7c9"}
+
+2015-11-10 20:36:45,670|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/49788461-0962-44c4-aacb-fb3b91a29fae/add_router_interface.json -X PUT -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"subnet_id": "66045977-f796-43e6-8896-e5134dcc7973"}'
+
+2015-11-10 20:36:45,672|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:46,107|DEBUG|19964-MainThread|_make_request connectionpool:360| "PUT /v2.0/routers/49788461-0962-44c4-aacb-fb3b91a29fae/add_router_interface.json HTTP/1.1" 200 255
+2015-11-10 20:36:46,108|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:200 {'date': 'Tue, 10 Nov 2015 15:08:40 GMT', 'content-length': '255', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-fa209bf9-fc99-42a8-b7b7-9ac3e63e2ae6'} {"subnet_id": "66045977-f796-43e6-8896-e5134dcc7973", "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "subnet_ids": ["66045977-f796-43e6-8896-e5134dcc7973"], "port_id": "3f44d304-f2e5-4157-97ab-6173fa4b8610", "id": "49788461-0962-44c4-aacb-fb3b91a29fae"}
+
+2015-11-10 20:36:46,108|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/8681065b-d9fa-4abc-baa5-8db4020cfcc0/add_router_interface.json -X PUT -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"subnet_id": "d8aca88b-a20f-41bd-891d-db49108fecf4"}'
+
+2015-11-10 20:36:46,109|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:36:46,300|DEBUG|19964-MainThread|_make_request connectionpool:360| "PUT /v2.0/routers/8681065b-d9fa-4abc-baa5-8db4020cfcc0/add_router_interface.json HTTP/1.1" 200 255
+2015-11-10 20:36:46,301|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:200 {'date': 'Tue, 10 Nov 2015 15:08:41 GMT', 'content-length': '255', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-c5387e06-b865-4adf-aac9-bb120ea66e2d'} {"subnet_id": "d8aca88b-a20f-41bd-891d-db49108fecf4", "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "subnet_ids": ["d8aca88b-a20f-41bd-891d-db49108fecf4"], "port_id": "21d1b69d-e085-4287-847b-e1b0b1b18b24", "id": "8681065b-d9fa-4abc-baa5-8db4020cfcc0"}
+
+2015-11-10 20:36:46,301|DEBUG|19964-MainThread|wait_for_dnsmasq_initialization cnps_data_plane_collection:154| Start DNSMASQ namespace test
+net_count: 10
+2015-11-10 20:36:46,301|DEBUG|19964-MainThread|wait_for_dnsmasq_initialization cnps_data_plane_collection:156| arg: ['sh', '/root/L3_data_plane/dhcp_latency_check.sh', '10']
+2015-11-10 20:36:46,301|DEBUG|19964-MainThread|execute cnps_data_plane_collection:217| os_cmd: ['sh', '/root/L3_data_plane/dhcp_latency_check.sh', '10']
+2015-11-10 20:37:02,336|DEBUG|19964-MainThread|execute cnps_data_plane_collection:223| cnp: sub_out: 1
+  sub_err: 
+2015-11-10 20:37:02,336|DEBUG|19964-MainThread|wait_for_dnsmasq_initialization cnps_data_plane_collection:159| Finished DNSMASQ namespace test
+2015-11-10 20:37:02,340|DEBUG|19964-MainThread|parse_date iso8601:171| Parsed 2015-11-10T16:08:35Z into {'tz_sign': None, 'second_fraction': None, 'hour': u'16', 'daydash': u'10', 'tz_hour': None, 'month': None, 'timezone': u'Z', 'second': u'35', 'tz_minute': None, 'year': u'2015', 'separator': u'T', 'monthdash': u'11', 'day': None, 'minute': u'08'} with default timezone <iso8601.iso8601.Utc object at 0x1c2dfd0>
+2015-11-10 20:37:02,340|DEBUG|19964-MainThread|to_int iso8601:127| Got u'2015' for 'year' with default None
+2015-11-10 20:37:02,340|DEBUG|19964-MainThread|to_int iso8601:127| Got u'11' for 'monthdash' with default None
+2015-11-10 20:37:02,340|DEBUG|19964-MainThread|to_int iso8601:127| Got 11 for 'month' with default 11
+2015-11-10 20:37:02,340|DEBUG|19964-MainThread|to_int iso8601:127| Got u'10' for 'daydash' with default None
+2015-11-10 20:37:02,340|DEBUG|19964-MainThread|to_int iso8601:127| Got 10 for 'day' with default 10
+2015-11-10 20:37:02,340|DEBUG|19964-MainThread|to_int iso8601:127| Got u'16' for 'hour' with default None
+2015-11-10 20:37:02,340|DEBUG|19964-MainThread|to_int iso8601:127| Got u'08' for 'minute' with default None
+2015-11-10 20:37:02,340|DEBUG|19964-MainThread|to_int iso8601:127| Got u'35' for 'second' with default None
+2015-11-10 20:37:02,351|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:37:03,131|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers HTTP/1.1" 202 438
+2015-11-10 20:37:03,134|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:37:03,229|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/detail HTTP/1.1" 200 1492
+2015-11-10 20:37:08,237|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:37:08,345|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/632fed7e-5478-4320-bf33-e24b76012a00 HTTP/1.1" 200 1741
+2015-11-10 20:37:10,350|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:37:10,462|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/632fed7e-5478-4320-bf33-e24b76012a00 HTTP/1.1" 200 1741
+2015-11-10 20:37:12,467|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:37:12,572|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/632fed7e-5478-4320-bf33-e24b76012a00 HTTP/1.1" 200 1741
+2015-11-10 20:37:14,576|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:37:14,677|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/632fed7e-5478-4320-bf33-e24b76012a00 HTTP/1.1" 200 1758
+2015-11-10 20:37:14,679|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:37:15,112|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers HTTP/1.1" 202 438
+2015-11-10 20:37:15,115|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:37:15,216|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/detail HTTP/1.1" 200 3240
+2015-11-10 20:37:20,224|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:37:20,319|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/c9d3bbe7-dfb9-4ff0-a58b-f5a5bda25e50 HTTP/1.1" 200 1741
+2015-11-10 20:37:22,324|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:37:22,526|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/c9d3bbe7-dfb9-4ff0-a58b-f5a5bda25e50 HTTP/1.1" 200 1741
+2015-11-10 20:37:24,531|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:37:24,627|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/c9d3bbe7-dfb9-4ff0-a58b-f5a5bda25e50 HTTP/1.1" 200 1741
+2015-11-10 20:37:26,632|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:37:26,748|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/c9d3bbe7-dfb9-4ff0-a58b-f5a5bda25e50 HTTP/1.1" 200 1758
+2015-11-10 20:37:26,750|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:37:27,267|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers HTTP/1.1" 202 438
+2015-11-10 20:37:27,269|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:37:27,383|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/detail HTTP/1.1" 200 4988
+2015-11-10 20:37:32,391|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:37:32,484|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/1b4ac768-d429-4fb1-b23c-b1f60dd8d048 HTTP/1.1" 200 1741
+2015-11-10 20:37:34,489|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:37:34,586|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/1b4ac768-d429-4fb1-b23c-b1f60dd8d048 HTTP/1.1" 200 1758
+2015-11-10 20:37:34,589|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:37:35,253|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers HTTP/1.1" 202 438
+2015-11-10 20:37:35,255|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:37:35,370|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/detail HTTP/1.1" 200 6736
+2015-11-10 20:37:40,378|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:37:40,482|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/72c86339-c5a2-4ba2-9f9c-306754f94ace HTTP/1.1" 200 1741
+2015-11-10 20:37:42,486|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:37:42,589|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/72c86339-c5a2-4ba2-9f9c-306754f94ace HTTP/1.1" 200 1758
+2015-11-10 20:37:42,592|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:37:42,892|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers HTTP/1.1" 202 438
+2015-11-10 20:37:42,895|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:37:43,108|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/detail HTTP/1.1" 200 8484
+2015-11-10 20:37:48,117|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:37:48,229|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/56a93cc1-bc8a-4b23-bc7f-70182df758d7 HTTP/1.1" 200 1741
+2015-11-10 20:37:50,234|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:37:50,354|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/56a93cc1-bc8a-4b23-bc7f-70182df758d7 HTTP/1.1" 200 1758
+2015-11-10 20:37:50,356|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:37:50,651|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers HTTP/1.1" 202 438
+2015-11-10 20:37:50,653|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:37:50,784|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/detail HTTP/1.1" 200 10232
+2015-11-10 20:37:55,793|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:37:55,906|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/9a281c5d-776c-429e-9fd8-090b9ab35d38 HTTP/1.1" 200 1741
+2015-11-10 20:37:57,911|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:37:58,010|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/9a281c5d-776c-429e-9fd8-090b9ab35d38 HTTP/1.1" 200 1758
+2015-11-10 20:37:58,012|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:37:58,419|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers HTTP/1.1" 202 438
+2015-11-10 20:37:58,421|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:37:58,552|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/detail HTTP/1.1" 200 11980
+2015-11-10 20:38:03,561|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:38:03,658|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/68874ca5-784b-41bc-a04b-8b645942b2f4 HTTP/1.1" 200 1741
+2015-11-10 20:38:05,663|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:38:05,760|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/68874ca5-784b-41bc-a04b-8b645942b2f4 HTTP/1.1" 200 1758
+2015-11-10 20:38:05,762|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:38:06,048|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers HTTP/1.1" 202 438
+2015-11-10 20:38:06,050|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:38:06,193|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/detail HTTP/1.1" 200 13728
+2015-11-10 20:38:11,203|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:38:11,303|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/61ab07fa-61ba-4309-b340-05d260b4f96b HTTP/1.1" 200 1741
+2015-11-10 20:38:13,307|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:38:13,407|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/61ab07fa-61ba-4309-b340-05d260b4f96b HTTP/1.1" 200 1758
+2015-11-10 20:38:13,410|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:38:13,874|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers HTTP/1.1" 202 438
+2015-11-10 20:38:13,876|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:38:14,025|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/detail HTTP/1.1" 200 15476
+2015-11-10 20:38:19,035|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:38:19,136|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/1471308e-822c-43de-bd51-8a4bd579cf7d HTTP/1.1" 200 1741
+2015-11-10 20:38:21,140|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:38:21,246|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/1471308e-822c-43de-bd51-8a4bd579cf7d HTTP/1.1" 200 1758
+2015-11-10 20:38:21,249|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:38:21,572|DEBUG|19964-MainThread|_make_request connectionpool:360| "POST /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers HTTP/1.1" 202 438
+2015-11-10 20:38:21,574|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:38:21,828|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/detail HTTP/1.1" 200 17224
+2015-11-10 20:38:26,838|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:38:26,956|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/4e400982-7d66-4ac2-abe7-8f694628a7cb HTTP/1.1" 200 1741
+2015-11-10 20:38:28,961|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:38:29,064|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/4e400982-7d66-4ac2-abe7-8f694628a7cb HTTP/1.1" 200 1758
+2015-11-10 20:38:29,066|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:38:29,131|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/632fed7e-5478-4320-bf33-e24b76012a00/os-interface HTTP/1.1" 200 283
+2015-11-10 20:38:29,132|DEBUG|19964-MainThread|generate_ns_overlay_data cnps_data_plane_collection:171| string: qrouter-0cc4dbb0-786f-4127-8ca2-5778411b5a96:10.20.0.3
+
+2015-11-10 20:38:29,133|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:38:29,202|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/c9d3bbe7-dfb9-4ff0-a58b-f5a5bda25e50/os-interface HTTP/1.1" 200 283
+2015-11-10 20:38:29,203|DEBUG|19964-MainThread|generate_ns_overlay_data cnps_data_plane_collection:171| string: qrouter-b1f4fa64-f08e-4279-9b10-87a055406399:10.20.1.3
+
+2015-11-10 20:38:29,204|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:38:29,273|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/1b4ac768-d429-4fb1-b23c-b1f60dd8d048/os-interface HTTP/1.1" 200 283
+2015-11-10 20:38:29,274|DEBUG|19964-MainThread|generate_ns_overlay_data cnps_data_plane_collection:171| string: qrouter-fab58565-bf58-4e95-86f2-20f4c2e77b76:10.20.2.3
+
+2015-11-10 20:38:29,275|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:38:29,344|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/72c86339-c5a2-4ba2-9f9c-306754f94ace/os-interface HTTP/1.1" 200 283
+2015-11-10 20:38:29,345|DEBUG|19964-MainThread|generate_ns_overlay_data cnps_data_plane_collection:171| string: qrouter-cfe762a7-a3d7-4222-a47c-7082cf3338a6:10.20.3.3
+
+2015-11-10 20:38:29,346|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:38:29,411|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/56a93cc1-bc8a-4b23-bc7f-70182df758d7/os-interface HTTP/1.1" 200 283
+2015-11-10 20:38:29,412|DEBUG|19964-MainThread|generate_ns_overlay_data cnps_data_plane_collection:171| string: qrouter-1760e9dd-899e-452c-8f35-656e48da595a:10.20.4.3
+
+2015-11-10 20:38:29,413|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:38:29,589|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/9a281c5d-776c-429e-9fd8-090b9ab35d38/os-interface HTTP/1.1" 200 283
+2015-11-10 20:38:29,590|DEBUG|19964-MainThread|generate_ns_overlay_data cnps_data_plane_collection:171| string: qrouter-b69ececf-b66d-4094-a5df-cba2fd7ded4b:10.20.5.3
+
+2015-11-10 20:38:29,591|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:38:29,658|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/68874ca5-784b-41bc-a04b-8b645942b2f4/os-interface HTTP/1.1" 200 283
+2015-11-10 20:38:29,659|DEBUG|19964-MainThread|generate_ns_overlay_data cnps_data_plane_collection:171| string: qrouter-59fe7952-189d-4e21-8676-bbfaa4b3fd3a:10.20.6.3
+
+2015-11-10 20:38:29,660|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:38:29,730|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/61ab07fa-61ba-4309-b340-05d260b4f96b/os-interface HTTP/1.1" 200 283
+2015-11-10 20:38:29,731|DEBUG|19964-MainThread|generate_ns_overlay_data cnps_data_plane_collection:171| string: qrouter-fe643a6e-0412-48db-80f2-bcb353d7d7c9:10.20.7.3
+
+2015-11-10 20:38:29,732|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:38:29,797|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/1471308e-822c-43de-bd51-8a4bd579cf7d/os-interface HTTP/1.1" 200 283
+2015-11-10 20:38:29,798|DEBUG|19964-MainThread|generate_ns_overlay_data cnps_data_plane_collection:171| string: qrouter-49788461-0962-44c4-aacb-fb3b91a29fae:10.20.8.3
+
+2015-11-10 20:38:29,799|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:38:29,868|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/4e400982-7d66-4ac2-abe7-8f694628a7cb/os-interface HTTP/1.1" 200 283
+2015-11-10 20:38:29,869|DEBUG|19964-MainThread|generate_ns_overlay_data cnps_data_plane_collection:171| string: qrouter-8681065b-d9fa-4abc-baa5-8db4020cfcc0:10.20.9.3
+
+2015-11-10 20:38:29,870|DEBUG|19964-MainThread|create_tenant_resource cnps_data_plane_collection:80| Going to sleep
+2015-11-10 20:38:29,870|DEBUG|19964-MainThread|create_tenant_resource cnps_data_plane_collection:82| Starting ssh test
+2015-11-10 20:38:29,870|DEBUG|19964-MainThread|execute cnps_data_plane_collection:217| os_cmd: ['sh', '/root/L3_data_plane/test_ssh.sh']
+2015-11-10 20:39:35,089|DEBUG|19964-MainThread|execute cnps_data_plane_collection:223| cnp: sub_out: 1
+  sub_err: 
+2015-11-10 20:39:35,089|DEBUG|19964-MainThread|create_tenant_resource cnps_data_plane_collection:86| Finished ssh test
+2015-11-10 20:39:35,089|DEBUG|19964-MainThread|create_tenant_resource cnps_data_plane_collection:102| Starting iperf client
+2015-11-10 20:39:35,089|DEBUG|19964-MainThread|execute cnps_data_plane_collection:217| os_cmd: ['sh', '/root/L3_data_plane/start_iperf_client.sh', '1.1.1.34', '90']
+2015-11-10 20:39:41,301|DEBUG|19964-MainThread|execute cnps_data_plane_collection:223| cnp: sub_out:   sub_err: Warning: Permanently added '10.20.0.3' (RSA) to the list of known hosts.
+Warning: Permanently added '10.20.1.3' (RSA) to the list of known hosts.
+Warning: Permanently added '10.20.2.3' (RSA) to the list of known hosts.
+Warning: Permanently added '10.20.3.3' (RSA) to the list of known hosts.
+Warning: Permanently added '10.20.4.3' (RSA) to the list of known hosts.
+Warning: Permanently added '10.20.5.3' (RSA) to the list of known hosts.
+Warning: Permanently added '10.20.6.3' (RSA) to the list of known hosts.
+Warning: Permanently added '10.20.7.3' (RSA) to the list of known hosts.
+Warning: Permanently added '10.20.8.3' (RSA) to the list of known hosts.
+Warning: Permanently added '10.20.9.3' (RSA) to the list of known hosts.
+Warning: Permanently added '10.20.0.3' (RSA) to the list of known hosts.
+Warning: Permanently added '10.20.1.3' (RSA) to the list of known hosts.
+Warning: Permanently added '10.20.2.3' (RSA) to the list of known hosts.
+Warning: Permanently added '10.20.3.3' (RSA) to the list of known hosts.
+Warning: Permanently added '10.20.4.3' (RSA) to the list of known hosts.
+Warning: Permanently added '10.20.5.3' (RSA) to the list of known hosts.
+Warning: Permanently added '10.20.6.3' (RSA) to the list of known hosts.
+Warning: Permanently added '10.20.7.3' (RSA) to the list of known hosts.
+Warning: Permanently added '10.20.8.3' (RSA) to the list of known hosts.
+Warning: Permanently added '10.20.9.3' (RSA) to the list of known hosts.
+
+2015-11-10 20:39:41,302|DEBUG|19964-MainThread|create_tenant_resource cnps_data_plane_collection:107| Finished starting iperf client
+2015-11-10 20:41:11,392|DEBUG|19964-MainThread|create_tenant_resource cnps_data_plane_collection:129| Starting iperf client logs transfer
+2015-11-10 20:41:11,392|DEBUG|19964-MainThread|execute cnps_data_plane_collection:217| os_cmd: ['sh', '/root/L3_data_plane/transfer_iperf_logs.sh']
+2015-11-10 20:41:14,467|DEBUG|19964-MainThread|execute cnps_data_plane_collection:223| cnp: sub_out:   sub_err: Warning: Permanently added '10.20.0.3' (RSA) to the list of known hosts.
+Warning: Permanently added '10.20.1.3' (RSA) to the list of known hosts.
+Warning: Permanently added '10.20.2.3' (RSA) to the list of known hosts.
+Warning: Permanently added '10.20.3.3' (RSA) to the list of known hosts.
+Warning: Permanently added '10.20.4.3' (RSA) to the list of known hosts.
+Warning: Permanently added '10.20.5.3' (RSA) to the list of known hosts.
+Warning: Permanently added '10.20.6.3' (RSA) to the list of known hosts.
+Warning: Permanently added '10.20.7.3' (RSA) to the list of known hosts.
+Warning: Permanently added '10.20.8.3' (RSA) to the list of known hosts.
+Warning: Permanently added '10.20.9.3' (RSA) to the list of known hosts.
+
+2015-11-10 20:41:14,468|DEBUG|19964-MainThread|create_tenant_resource cnps_data_plane_collection:134| Finished iperf client logs transfer
+2015-11-10 20:41:14,468|DEBUG|19964-MainThread|create_tenant_resource cnps_data_plane_collection:135| Starting data collection
+2015-11-10 20:41:14,468|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:178| line: qrouter-0cc4dbb0-786f-4127-8ca2-5778411b5a96:10.20.0.3
+
+2015-11-10 20:41:14,468|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:183| ns: qrouter-0cc4dbb0-786f-4127-8ca2-5778411b5a96 fixed_ip: 10.20.0.3
+2015-11-10 20:41:14,468|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:185| arg: ip netns exec qrouter-0cc4dbb0-786f-4127-8ca2-5778411b5a96 ssh root@10.20.0.3 tail -n 1 ~/iperf_snat_client_10.20.0.3.log 2> /dev/null
+2015-11-10 20:41:14,822|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:192| sub_out: 20151110071139,10.20.0.3,57942,1.1.1.34,5001,3,0.0-90.0,9314893824,827960424
+
+2015-11-10 20:41:14,822|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:178| line: qrouter-b1f4fa64-f08e-4279-9b10-87a055406399:10.20.1.3
+
+2015-11-10 20:41:14,822|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:183| ns: qrouter-b1f4fa64-f08e-4279-9b10-87a055406399 fixed_ip: 10.20.1.3
+2015-11-10 20:41:14,823|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:185| arg: ip netns exec qrouter-b1f4fa64-f08e-4279-9b10-87a055406399 ssh root@10.20.1.3 tail -n 1 ~/iperf_snat_client_10.20.1.3.log 2> /dev/null
+2015-11-10 20:41:15,096|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:192| sub_out: 20151110071144,10.20.1.3,46806,1.1.1.34,5001,3,0.0-90.0,13260292096,1178551361
+
+2015-11-10 20:41:15,096|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:178| line: qrouter-fab58565-bf58-4e95-86f2-20f4c2e77b76:10.20.2.3
+
+2015-11-10 20:41:15,096|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:183| ns: qrouter-fab58565-bf58-4e95-86f2-20f4c2e77b76 fixed_ip: 10.20.2.3
+2015-11-10 20:41:15,096|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:185| arg: ip netns exec qrouter-fab58565-bf58-4e95-86f2-20f4c2e77b76 ssh root@10.20.2.3 tail -n 1 ~/iperf_snat_client_10.20.2.3.log 2> /dev/null
+2015-11-10 20:41:15,368|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:192| sub_out: 20151110071140,10.20.2.3,57004,1.1.1.34,5001,3,0.0-90.0,6996754432,621893919
+
+2015-11-10 20:41:15,368|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:178| line: qrouter-cfe762a7-a3d7-4222-a47c-7082cf3338a6:10.20.3.3
+
+2015-11-10 20:41:15,368|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:183| ns: qrouter-cfe762a7-a3d7-4222-a47c-7082cf3338a6 fixed_ip: 10.20.3.3
+2015-11-10 20:41:15,368|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:185| arg: ip netns exec qrouter-cfe762a7-a3d7-4222-a47c-7082cf3338a6 ssh root@10.20.3.3 tail -n 1 ~/iperf_snat_client_10.20.3.3.log 2> /dev/null
+2015-11-10 20:41:15,658|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:192| sub_out: 20151110071144,10.20.3.3,58986,1.1.1.34,5001,3,0.0-90.0,13255573504,1178181629
+
+2015-11-10 20:41:15,658|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:178| line: qrouter-1760e9dd-899e-452c-8f35-656e48da595a:10.20.4.3
+
+2015-11-10 20:41:15,658|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:183| ns: qrouter-1760e9dd-899e-452c-8f35-656e48da595a fixed_ip: 10.20.4.3
+2015-11-10 20:41:15,659|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:185| arg: ip netns exec qrouter-1760e9dd-899e-452c-8f35-656e48da595a ssh root@10.20.4.3 tail -n 1 ~/iperf_snat_client_10.20.4.3.log 2> /dev/null
+2015-11-10 20:41:15,924|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:192| sub_out: 20151110071144,10.20.4.3,50221,1.1.1.34,5001,3,0.0-90.0,11586764800,1029921545
+
+2015-11-10 20:41:15,924|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:178| line: qrouter-b69ececf-b66d-4094-a5df-cba2fd7ded4b:10.20.5.3
+
+2015-11-10 20:41:15,924|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:183| ns: qrouter-b69ececf-b66d-4094-a5df-cba2fd7ded4b fixed_ip: 10.20.5.3
+2015-11-10 20:41:15,924|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:185| arg: ip netns exec qrouter-b69ececf-b66d-4094-a5df-cba2fd7ded4b ssh root@10.20.5.3 tail -n 1 ~/iperf_snat_client_10.20.5.3.log 2> /dev/null
+2015-11-10 20:41:16,201|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:192| sub_out: 20151110071141,10.20.5.3,57256,1.1.1.34,5001,3,0.0-90.0,8891531264,790344828
+
+2015-11-10 20:41:16,201|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:178| line: qrouter-59fe7952-189d-4e21-8676-bbfaa4b3fd3a:10.20.6.3
+
+2015-11-10 20:41:16,201|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:183| ns: qrouter-59fe7952-189d-4e21-8676-bbfaa4b3fd3a fixed_ip: 10.20.6.3
+2015-11-10 20:41:16,201|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:185| arg: ip netns exec qrouter-59fe7952-189d-4e21-8676-bbfaa4b3fd3a ssh root@10.20.6.3 tail -n 1 ~/iperf_snat_client_10.20.6.3.log 2> /dev/null
+2015-11-10 20:41:16,469|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:192| sub_out: 20151110071145,10.20.6.3,40663,1.1.1.34,5001,3,0.0-90.0,13318881280,1183899334
+
+2015-11-10 20:41:16,469|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:178| line: qrouter-fe643a6e-0412-48db-80f2-bcb353d7d7c9:10.20.7.3
+
+2015-11-10 20:41:16,469|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:183| ns: qrouter-fe643a6e-0412-48db-80f2-bcb353d7d7c9 fixed_ip: 10.20.7.3
+2015-11-10 20:41:16,469|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:185| arg: ip netns exec qrouter-fe643a6e-0412-48db-80f2-bcb353d7d7c9 ssh root@10.20.7.3 tail -n 1 ~/iperf_snat_client_10.20.7.3.log 2> /dev/null
+2015-11-10 20:41:16,743|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:192| sub_out: 20151110071142,10.20.7.3,42654,1.1.1.34,5001,3,0.0-90.0,8753381376,778071186
+
+2015-11-10 20:41:16,743|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:178| line: qrouter-49788461-0962-44c4-aacb-fb3b91a29fae:10.20.8.3
+
+2015-11-10 20:41:16,743|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:183| ns: qrouter-49788461-0962-44c4-aacb-fb3b91a29fae fixed_ip: 10.20.8.3
+2015-11-10 20:41:16,743|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:185| arg: ip netns exec qrouter-49788461-0962-44c4-aacb-fb3b91a29fae ssh root@10.20.8.3 tail -n 1 ~/iperf_snat_client_10.20.8.3.log 2> /dev/null
+2015-11-10 20:41:17,011|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:192| sub_out: 20151110071142,10.20.8.3,35549,1.1.1.34,5001,3,0.0-90.0,9156034560,813862477
+
+2015-11-10 20:41:17,011|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:178| line: qrouter-8681065b-d9fa-4abc-baa5-8db4020cfcc0:10.20.9.3
+
+2015-11-10 20:41:17,012|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:183| ns: qrouter-8681065b-d9fa-4abc-baa5-8db4020cfcc0 fixed_ip: 10.20.9.3
+2015-11-10 20:41:17,012|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:185| arg: ip netns exec qrouter-8681065b-d9fa-4abc-baa5-8db4020cfcc0 ssh root@10.20.9.3 tail -n 1 ~/iperf_snat_client_10.20.9.3.log 2> /dev/null
+2015-11-10 20:41:17,276|DEBUG|19964-MainThread|start_data_collection cnps_data_plane_collection:192| sub_out: 20151110071142,10.20.9.3,45574,1.1.1.34,5001,3,0.0-90.0,9259974656,823096173
+
+2015-11-10 20:41:17,276|INFO|19964-MainThread|process_data_collected cnps_data_plane_collection:209| Aggregate throughput: 9.225782876
+2015-11-10 20:41:17,278|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:17,482|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/632fed7e-5478-4320-bf33-e24b76012a00 HTTP/1.1" 204 0
+2015-11-10 20:41:17,484|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:17,833|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/c9d3bbe7-dfb9-4ff0-a58b-f5a5bda25e50 HTTP/1.1" 204 0
+2015-11-10 20:41:17,835|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:18,090|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/1b4ac768-d429-4fb1-b23c-b1f60dd8d048 HTTP/1.1" 204 0
+2015-11-10 20:41:18,092|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:18,269|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/72c86339-c5a2-4ba2-9f9c-306754f94ace HTTP/1.1" 204 0
+2015-11-10 20:41:18,270|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:18,613|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/56a93cc1-bc8a-4b23-bc7f-70182df758d7 HTTP/1.1" 204 0
+2015-11-10 20:41:18,614|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:18,847|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/9a281c5d-776c-429e-9fd8-090b9ab35d38 HTTP/1.1" 204 0
+2015-11-10 20:41:18,848|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:19,063|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/68874ca5-784b-41bc-a04b-8b645942b2f4 HTTP/1.1" 204 0
+2015-11-10 20:41:19,065|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:19,294|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/61ab07fa-61ba-4309-b340-05d260b4f96b HTTP/1.1" 204 0
+2015-11-10 20:41:19,297|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:19,483|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/1471308e-822c-43de-bd51-8a4bd579cf7d HTTP/1.1" 204 0
+2015-11-10 20:41:19,485|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:19,700|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/4e400982-7d66-4ac2-abe7-8f694628a7cb HTTP/1.1" 204 0
+2015-11-10 20:41:19,702|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:19,741|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/632fed7e-5478-4320-bf33-e24b76012a00 HTTP/1.1" 404 122
+2015-11-10 20:41:19,743|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:19,785|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/c9d3bbe7-dfb9-4ff0-a58b-f5a5bda25e50 HTTP/1.1" 404 122
+2015-11-10 20:41:19,786|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:19,865|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/1b4ac768-d429-4fb1-b23c-b1f60dd8d048 HTTP/1.1" 200 1605
+2015-11-10 20:41:19,867|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:19,941|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/72c86339-c5a2-4ba2-9f9c-306754f94ace HTTP/1.1" 200 1605
+2015-11-10 20:41:19,943|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:20,021|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/56a93cc1-bc8a-4b23-bc7f-70182df758d7 HTTP/1.1" 200 1722
+2015-11-10 20:41:22,026|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:22,064|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/56a93cc1-bc8a-4b23-bc7f-70182df758d7 HTTP/1.1" 404 122
+2015-11-10 20:41:22,066|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:22,105|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/9a281c5d-776c-429e-9fd8-090b9ab35d38 HTTP/1.1" 404 122
+2015-11-10 20:41:22,107|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:22,147|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/68874ca5-784b-41bc-a04b-8b645942b2f4 HTTP/1.1" 404 122
+2015-11-10 20:41:22,148|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:22,186|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/61ab07fa-61ba-4309-b340-05d260b4f96b HTTP/1.1" 404 122
+2015-11-10 20:41:22,188|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:22,228|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/1471308e-822c-43de-bd51-8a4bd579cf7d HTTP/1.1" 404 122
+2015-11-10 20:41:22,230|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:22,267|DEBUG|19964-MainThread|_make_request connectionpool:360| "GET /v2/d99ab9c5d14f4dd1aa9830f0f70f3fe5/servers/4e400982-7d66-4ac2-abe7-8f694628a7cb HTTP/1.1" 404 122
+2015-11-10 20:41:22,268|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/0cc4dbb0-786f-4127-8ca2-5778411b5a96/remove_router_interface.json -X PUT -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"subnet_id": "e2e480fb-0c00-45ae-a922-fb2fac7b99ab"}'
+
+2015-11-10 20:41:22,269|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:22,504|DEBUG|19964-MainThread|_make_request connectionpool:360| "PUT /v2.0/routers/0cc4dbb0-786f-4127-8ca2-5778411b5a96/remove_router_interface.json HTTP/1.1" 200 255
+2015-11-10 20:41:22,504|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:200 {'date': 'Tue, 10 Nov 2015 15:13:17 GMT', 'content-length': '255', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-8fc65272-5c29-4245-b828-434880e32a39'} {"subnet_id": "e2e480fb-0c00-45ae-a922-fb2fac7b99ab", "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "subnet_ids": ["e2e480fb-0c00-45ae-a922-fb2fac7b99ab"], "port_id": "106be611-3c88-4ff3-a760-7a4776747b12", "id": "0cc4dbb0-786f-4127-8ca2-5778411b5a96"}
+
+2015-11-10 20:41:22,505|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/b1f4fa64-f08e-4279-9b10-87a055406399/remove_router_interface.json -X PUT -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"subnet_id": "7f04af37-2f1d-41ca-b761-02bb76c5cdc6"}'
+
+2015-11-10 20:41:22,506|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:22,652|DEBUG|19964-MainThread|_make_request connectionpool:360| "PUT /v2.0/routers/b1f4fa64-f08e-4279-9b10-87a055406399/remove_router_interface.json HTTP/1.1" 200 255
+2015-11-10 20:41:22,652|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:200 {'date': 'Tue, 10 Nov 2015 15:13:17 GMT', 'content-length': '255', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-1a46bbee-b54d-4a03-acd4-4c7aee17fac6'} {"subnet_id": "7f04af37-2f1d-41ca-b761-02bb76c5cdc6", "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "subnet_ids": ["7f04af37-2f1d-41ca-b761-02bb76c5cdc6"], "port_id": "1d884f30-369a-47ae-8cb1-db95fefb026c", "id": "b1f4fa64-f08e-4279-9b10-87a055406399"}
+
+2015-11-10 20:41:22,653|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/fab58565-bf58-4e95-86f2-20f4c2e77b76/remove_router_interface.json -X PUT -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"subnet_id": "7bbe29a8-59e3-4766-a82d-e88867bc88d7"}'
+
+2015-11-10 20:41:22,654|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:22,801|DEBUG|19964-MainThread|_make_request connectionpool:360| "PUT /v2.0/routers/fab58565-bf58-4e95-86f2-20f4c2e77b76/remove_router_interface.json HTTP/1.1" 200 255
+2015-11-10 20:41:22,802|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:200 {'date': 'Tue, 10 Nov 2015 15:13:17 GMT', 'content-length': '255', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-69951443-dea0-41a5-8891-cf3d033e2a5e'} {"subnet_id": "7bbe29a8-59e3-4766-a82d-e88867bc88d7", "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "subnet_ids": ["7bbe29a8-59e3-4766-a82d-e88867bc88d7"], "port_id": "a27ac465-4a1c-41ad-a9cf-64d664eb99f2", "id": "fab58565-bf58-4e95-86f2-20f4c2e77b76"}
+
+2015-11-10 20:41:22,802|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/cfe762a7-a3d7-4222-a47c-7082cf3338a6/remove_router_interface.json -X PUT -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"subnet_id": "0f86b260-803a-4c7a-b7e1-1d64fa26af82"}'
+
+2015-11-10 20:41:22,803|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:22,952|DEBUG|19964-MainThread|_make_request connectionpool:360| "PUT /v2.0/routers/cfe762a7-a3d7-4222-a47c-7082cf3338a6/remove_router_interface.json HTTP/1.1" 200 255
+2015-11-10 20:41:22,953|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:200 {'date': 'Tue, 10 Nov 2015 15:13:17 GMT', 'content-length': '255', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-56b403b2-a968-4385-8f3c-c9676102ae13'} {"subnet_id": "0f86b260-803a-4c7a-b7e1-1d64fa26af82", "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "subnet_ids": ["0f86b260-803a-4c7a-b7e1-1d64fa26af82"], "port_id": "213cffa8-a825-4754-a4af-ea56a186a903", "id": "cfe762a7-a3d7-4222-a47c-7082cf3338a6"}
+
+2015-11-10 20:41:22,953|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/1760e9dd-899e-452c-8f35-656e48da595a/remove_router_interface.json -X PUT -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"subnet_id": "19148108-c192-4d96-be0d-d525c3b995be"}'
+
+2015-11-10 20:41:22,954|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:23,105|DEBUG|19964-MainThread|_make_request connectionpool:360| "PUT /v2.0/routers/1760e9dd-899e-452c-8f35-656e48da595a/remove_router_interface.json HTTP/1.1" 200 255
+2015-11-10 20:41:23,105|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:200 {'date': 'Tue, 10 Nov 2015 15:13:17 GMT', 'content-length': '255', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-4b28606d-b454-4748-900c-afecb80228b9'} {"subnet_id": "19148108-c192-4d96-be0d-d525c3b995be", "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "subnet_ids": ["19148108-c192-4d96-be0d-d525c3b995be"], "port_id": "32f96f3f-ce7a-4440-9e84-f0d183fcdb7c", "id": "1760e9dd-899e-452c-8f35-656e48da595a"}
+
+2015-11-10 20:41:23,106|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/b69ececf-b66d-4094-a5df-cba2fd7ded4b/remove_router_interface.json -X PUT -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"subnet_id": "59b0adcc-ddca-4c19-a731-c7365c5aa109"}'
+
+2015-11-10 20:41:23,107|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:23,253|DEBUG|19964-MainThread|_make_request connectionpool:360| "PUT /v2.0/routers/b69ececf-b66d-4094-a5df-cba2fd7ded4b/remove_router_interface.json HTTP/1.1" 200 255
+2015-11-10 20:41:23,253|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:200 {'date': 'Tue, 10 Nov 2015 15:13:18 GMT', 'content-length': '255', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-61f9e59b-e788-4701-859b-56123a0e5294'} {"subnet_id": "59b0adcc-ddca-4c19-a731-c7365c5aa109", "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "subnet_ids": ["59b0adcc-ddca-4c19-a731-c7365c5aa109"], "port_id": "65aa72a3-31c9-40d8-bdaf-3f177bda1921", "id": "b69ececf-b66d-4094-a5df-cba2fd7ded4b"}
+
+2015-11-10 20:41:23,254|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/59fe7952-189d-4e21-8676-bbfaa4b3fd3a/remove_router_interface.json -X PUT -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"subnet_id": "1daf190d-1cc3-4477-8ca2-8acf21146605"}'
+
+2015-11-10 20:41:23,255|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:23,392|DEBUG|19964-MainThread|_make_request connectionpool:360| "PUT /v2.0/routers/59fe7952-189d-4e21-8676-bbfaa4b3fd3a/remove_router_interface.json HTTP/1.1" 200 255
+2015-11-10 20:41:23,393|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:200 {'date': 'Tue, 10 Nov 2015 15:13:18 GMT', 'content-length': '255', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-5218bb21-55fb-4c99-86e5-6c1bb3db99c0'} {"subnet_id": "1daf190d-1cc3-4477-8ca2-8acf21146605", "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "subnet_ids": ["1daf190d-1cc3-4477-8ca2-8acf21146605"], "port_id": "40dae782-1467-4059-87fd-5815522ffd05", "id": "59fe7952-189d-4e21-8676-bbfaa4b3fd3a"}
+
+2015-11-10 20:41:23,394|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/fe643a6e-0412-48db-80f2-bcb353d7d7c9/remove_router_interface.json -X PUT -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"subnet_id": "dfedca7d-34b5-4c38-add7-a6a0d6185a5e"}'
+
+2015-11-10 20:41:23,396|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:23,614|DEBUG|19964-MainThread|_make_request connectionpool:360| "PUT /v2.0/routers/fe643a6e-0412-48db-80f2-bcb353d7d7c9/remove_router_interface.json HTTP/1.1" 200 255
+2015-11-10 20:41:23,615|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:200 {'date': 'Tue, 10 Nov 2015 15:13:18 GMT', 'content-length': '255', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-1c8e2d35-db7f-41d9-80a7-c97ecd94331d'} {"subnet_id": "dfedca7d-34b5-4c38-add7-a6a0d6185a5e", "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "subnet_ids": ["dfedca7d-34b5-4c38-add7-a6a0d6185a5e"], "port_id": "d9f613c6-f237-4613-914f-6474cce3d022", "id": "fe643a6e-0412-48db-80f2-bcb353d7d7c9"}
+
+2015-11-10 20:41:23,615|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/49788461-0962-44c4-aacb-fb3b91a29fae/remove_router_interface.json -X PUT -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"subnet_id": "66045977-f796-43e6-8896-e5134dcc7973"}'
+
+2015-11-10 20:41:23,617|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:23,758|DEBUG|19964-MainThread|_make_request connectionpool:360| "PUT /v2.0/routers/49788461-0962-44c4-aacb-fb3b91a29fae/remove_router_interface.json HTTP/1.1" 200 255
+2015-11-10 20:41:23,758|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:200 {'date': 'Tue, 10 Nov 2015 15:13:18 GMT', 'content-length': '255', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-36a2c0cf-231d-4d30-88e5-1f0bee4d4e75'} {"subnet_id": "66045977-f796-43e6-8896-e5134dcc7973", "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "subnet_ids": ["66045977-f796-43e6-8896-e5134dcc7973"], "port_id": "3f44d304-f2e5-4157-97ab-6173fa4b8610", "id": "49788461-0962-44c4-aacb-fb3b91a29fae"}
+
+2015-11-10 20:41:23,759|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/8681065b-d9fa-4abc-baa5-8db4020cfcc0/remove_router_interface.json -X PUT -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"subnet_id": "d8aca88b-a20f-41bd-891d-db49108fecf4"}'
+
+2015-11-10 20:41:23,760|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:23,913|DEBUG|19964-MainThread|_make_request connectionpool:360| "PUT /v2.0/routers/8681065b-d9fa-4abc-baa5-8db4020cfcc0/remove_router_interface.json HTTP/1.1" 200 255
+2015-11-10 20:41:23,914|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:200 {'date': 'Tue, 10 Nov 2015 15:13:18 GMT', 'content-length': '255', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-a60b1e09-cf08-457d-97bb-e45955526c7a'} {"subnet_id": "d8aca88b-a20f-41bd-891d-db49108fecf4", "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "subnet_ids": ["d8aca88b-a20f-41bd-891d-db49108fecf4"], "port_id": "21d1b69d-e085-4287-847b-e1b0b1b18b24", "id": "8681065b-d9fa-4abc-baa5-8db4020cfcc0"}
+
+2015-11-10 20:41:23,914|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/0cc4dbb0-786f-4127-8ca2-5778411b5a96.json -X PUT -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"router": {"external_gateway_info": {}}}'
+
+2015-11-10 20:41:23,915|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:24,078|DEBUG|19964-MainThread|_make_request connectionpool:360| "PUT /v2.0/routers/0cc4dbb0-786f-4127-8ca2-5778411b5a96.json HTTP/1.1" 200 251
+2015-11-10 20:41:24,079|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:200 {'date': 'Tue, 10 Nov 2015 15:13:18 GMT', 'content-length': '251', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-af148854-6a57-48b7-82af-ec902fd9a86b'} {"router": {"status": "ACTIVE", "external_gateway_info": null, "name": "router-0", "admin_state_up": true, "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "distributed": false, "routes": [], "ha": false, "id": "0cc4dbb0-786f-4127-8ca2-5778411b5a96"}}
+
+2015-11-10 20:41:24,079|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/0cc4dbb0-786f-4127-8ca2-5778411b5a96.json -X DELETE -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e"
+
+2015-11-10 20:41:24,080|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:24,195|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2.0/routers/0cc4dbb0-786f-4127-8ca2-5778411b5a96.json HTTP/1.1" 204 0
+2015-11-10 20:41:24,195|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:204 {'date': 'Tue, 10 Nov 2015 15:13:19 GMT', 'content-length': '0', 'x-openstack-request-id': 'req-2f2a3c00-05c4-4d8f-9bb2-15195ef7ad63'} 
+
+2015-11-10 20:41:24,196|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/b1f4fa64-f08e-4279-9b10-87a055406399.json -X PUT -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"router": {"external_gateway_info": {}}}'
+
+2015-11-10 20:41:24,197|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:24,358|DEBUG|19964-MainThread|_make_request connectionpool:360| "PUT /v2.0/routers/b1f4fa64-f08e-4279-9b10-87a055406399.json HTTP/1.1" 200 251
+2015-11-10 20:41:24,358|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:200 {'date': 'Tue, 10 Nov 2015 15:13:19 GMT', 'content-length': '251', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-ab872ce4-ba8a-455a-86c2-e640f56be7b4'} {"router": {"status": "ACTIVE", "external_gateway_info": null, "name": "router-1", "admin_state_up": true, "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "distributed": false, "routes": [], "ha": false, "id": "b1f4fa64-f08e-4279-9b10-87a055406399"}}
+
+2015-11-10 20:41:24,359|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/b1f4fa64-f08e-4279-9b10-87a055406399.json -X DELETE -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e"
+
+2015-11-10 20:41:24,360|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:24,563|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2.0/routers/b1f4fa64-f08e-4279-9b10-87a055406399.json HTTP/1.1" 204 0
+2015-11-10 20:41:24,564|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:204 {'date': 'Tue, 10 Nov 2015 15:13:19 GMT', 'content-length': '0', 'x-openstack-request-id': 'req-d742e982-127d-4387-9b64-ddda12b3fad7'} 
+
+2015-11-10 20:41:24,565|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/fab58565-bf58-4e95-86f2-20f4c2e77b76.json -X PUT -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"router": {"external_gateway_info": {}}}'
+
+2015-11-10 20:41:24,566|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:25,169|DEBUG|19964-MainThread|_make_request connectionpool:360| "PUT /v2.0/routers/fab58565-bf58-4e95-86f2-20f4c2e77b76.json HTTP/1.1" 200 251
+2015-11-10 20:41:25,170|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:200 {'date': 'Tue, 10 Nov 2015 15:13:19 GMT', 'content-length': '251', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-8d0902f9-d5da-48f0-bf01-5a4d80ce173e'} {"router": {"status": "ACTIVE", "external_gateway_info": null, "name": "router-2", "admin_state_up": true, "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "distributed": false, "routes": [], "ha": false, "id": "fab58565-bf58-4e95-86f2-20f4c2e77b76"}}
+
+2015-11-10 20:41:25,170|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/fab58565-bf58-4e95-86f2-20f4c2e77b76.json -X DELETE -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e"
+
+2015-11-10 20:41:25,171|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:25,305|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2.0/routers/fab58565-bf58-4e95-86f2-20f4c2e77b76.json HTTP/1.1" 204 0
+2015-11-10 20:41:25,306|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:204 {'date': 'Tue, 10 Nov 2015 15:13:20 GMT', 'content-length': '0', 'x-openstack-request-id': 'req-a76dde1b-635e-474f-acd9-08f1ae9558a2'} 
+
+2015-11-10 20:41:25,306|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/cfe762a7-a3d7-4222-a47c-7082cf3338a6.json -X PUT -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"router": {"external_gateway_info": {}}}'
+
+2015-11-10 20:41:25,307|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:25,506|DEBUG|19964-MainThread|_make_request connectionpool:360| "PUT /v2.0/routers/cfe762a7-a3d7-4222-a47c-7082cf3338a6.json HTTP/1.1" 200 251
+2015-11-10 20:41:25,506|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:200 {'date': 'Tue, 10 Nov 2015 15:13:20 GMT', 'content-length': '251', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-68f6c127-97f3-4faa-9e77-18f024f53820'} {"router": {"status": "ACTIVE", "external_gateway_info": null, "name": "router-3", "admin_state_up": true, "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "distributed": false, "routes": [], "ha": false, "id": "cfe762a7-a3d7-4222-a47c-7082cf3338a6"}}
+
+2015-11-10 20:41:25,507|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/cfe762a7-a3d7-4222-a47c-7082cf3338a6.json -X DELETE -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e"
+
+2015-11-10 20:41:25,508|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:25,623|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2.0/routers/cfe762a7-a3d7-4222-a47c-7082cf3338a6.json HTTP/1.1" 204 0
+2015-11-10 20:41:25,624|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:204 {'date': 'Tue, 10 Nov 2015 15:13:20 GMT', 'content-length': '0', 'x-openstack-request-id': 'req-8ed9a9ee-af04-4310-8344-0725e0214649'} 
+
+2015-11-10 20:41:25,624|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/1760e9dd-899e-452c-8f35-656e48da595a.json -X PUT -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"router": {"external_gateway_info": {}}}'
+
+2015-11-10 20:41:25,625|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:25,883|DEBUG|19964-MainThread|_make_request connectionpool:360| "PUT /v2.0/routers/1760e9dd-899e-452c-8f35-656e48da595a.json HTTP/1.1" 200 251
+2015-11-10 20:41:25,884|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:200 {'date': 'Tue, 10 Nov 2015 15:13:20 GMT', 'content-length': '251', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-7905385a-985f-4197-94f1-8790408e89a9'} {"router": {"status": "ACTIVE", "external_gateway_info": null, "name": "router-4", "admin_state_up": true, "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "distributed": false, "routes": [], "ha": false, "id": "1760e9dd-899e-452c-8f35-656e48da595a"}}
+
+2015-11-10 20:41:25,884|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/1760e9dd-899e-452c-8f35-656e48da595a.json -X DELETE -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e"
+
+2015-11-10 20:41:25,886|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:25,995|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2.0/routers/1760e9dd-899e-452c-8f35-656e48da595a.json HTTP/1.1" 204 0
+2015-11-10 20:41:25,995|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:204 {'date': 'Tue, 10 Nov 2015 15:13:20 GMT', 'content-length': '0', 'x-openstack-request-id': 'req-28c2ffc3-4410-447f-bd7a-dfca7b40c127'} 
+
+2015-11-10 20:41:25,996|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/b69ececf-b66d-4094-a5df-cba2fd7ded4b.json -X PUT -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"router": {"external_gateway_info": {}}}'
+
+2015-11-10 20:41:25,997|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:26,177|DEBUG|19964-MainThread|_make_request connectionpool:360| "PUT /v2.0/routers/b69ececf-b66d-4094-a5df-cba2fd7ded4b.json HTTP/1.1" 200 251
+2015-11-10 20:41:26,177|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:200 {'date': 'Tue, 10 Nov 2015 15:13:21 GMT', 'content-length': '251', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-5ddd4d23-22a8-4238-9498-739cb58fb515'} {"router": {"status": "ACTIVE", "external_gateway_info": null, "name": "router-5", "admin_state_up": true, "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "distributed": false, "routes": [], "ha": false, "id": "b69ececf-b66d-4094-a5df-cba2fd7ded4b"}}
+
+2015-11-10 20:41:26,178|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/b69ececf-b66d-4094-a5df-cba2fd7ded4b.json -X DELETE -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e"
+
+2015-11-10 20:41:26,179|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:26,291|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2.0/routers/b69ececf-b66d-4094-a5df-cba2fd7ded4b.json HTTP/1.1" 204 0
+2015-11-10 20:41:26,292|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:204 {'date': 'Tue, 10 Nov 2015 15:13:21 GMT', 'content-length': '0', 'x-openstack-request-id': 'req-d7a02e4e-13ac-4578-a2c7-4e514abe7b7d'} 
+
+2015-11-10 20:41:26,292|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/59fe7952-189d-4e21-8676-bbfaa4b3fd3a.json -X PUT -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"router": {"external_gateway_info": {}}}'
+
+2015-11-10 20:41:26,293|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:26,467|DEBUG|19964-MainThread|_make_request connectionpool:360| "PUT /v2.0/routers/59fe7952-189d-4e21-8676-bbfaa4b3fd3a.json HTTP/1.1" 200 251
+2015-11-10 20:41:26,467|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:200 {'date': 'Tue, 10 Nov 2015 15:13:21 GMT', 'content-length': '251', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-8bcc1763-18d2-4992-b5f8-7e2ecd479b7a'} {"router": {"status": "ACTIVE", "external_gateway_info": null, "name": "router-6", "admin_state_up": true, "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "distributed": false, "routes": [], "ha": false, "id": "59fe7952-189d-4e21-8676-bbfaa4b3fd3a"}}
+
+2015-11-10 20:41:26,468|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/59fe7952-189d-4e21-8676-bbfaa4b3fd3a.json -X DELETE -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e"
+
+2015-11-10 20:41:26,470|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:26,616|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2.0/routers/59fe7952-189d-4e21-8676-bbfaa4b3fd3a.json HTTP/1.1" 204 0
+2015-11-10 20:41:26,617|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:204 {'date': 'Tue, 10 Nov 2015 15:13:21 GMT', 'content-length': '0', 'x-openstack-request-id': 'req-e1f9517c-a169-4fbe-a538-f60e74aa4c74'} 
+
+2015-11-10 20:41:26,617|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/fe643a6e-0412-48db-80f2-bcb353d7d7c9.json -X PUT -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"router": {"external_gateway_info": {}}}'
+
+2015-11-10 20:41:26,618|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:26,926|DEBUG|19964-MainThread|_make_request connectionpool:360| "PUT /v2.0/routers/fe643a6e-0412-48db-80f2-bcb353d7d7c9.json HTTP/1.1" 200 251
+2015-11-10 20:41:26,927|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:200 {'date': 'Tue, 10 Nov 2015 15:13:21 GMT', 'content-length': '251', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-6a1a1b2d-b381-4697-a831-01c61c0866da'} {"router": {"status": "ACTIVE", "external_gateway_info": null, "name": "router-7", "admin_state_up": true, "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "distributed": false, "routes": [], "ha": false, "id": "fe643a6e-0412-48db-80f2-bcb353d7d7c9"}}
+
+2015-11-10 20:41:26,928|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/fe643a6e-0412-48db-80f2-bcb353d7d7c9.json -X DELETE -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e"
+
+2015-11-10 20:41:26,929|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:27,052|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2.0/routers/fe643a6e-0412-48db-80f2-bcb353d7d7c9.json HTTP/1.1" 204 0
+2015-11-10 20:41:27,053|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:204 {'date': 'Tue, 10 Nov 2015 15:13:21 GMT', 'content-length': '0', 'x-openstack-request-id': 'req-2d856905-8fed-4929-80eb-85ea0e80f857'} 
+
+2015-11-10 20:41:27,054|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/49788461-0962-44c4-aacb-fb3b91a29fae.json -X PUT -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"router": {"external_gateway_info": {}}}'
+
+2015-11-10 20:41:27,055|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:27,237|DEBUG|19964-MainThread|_make_request connectionpool:360| "PUT /v2.0/routers/49788461-0962-44c4-aacb-fb3b91a29fae.json HTTP/1.1" 200 251
+2015-11-10 20:41:27,238|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:200 {'date': 'Tue, 10 Nov 2015 15:13:22 GMT', 'content-length': '251', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-efc8866d-7d9d-4adf-a1e5-d431bad680a8'} {"router": {"status": "ACTIVE", "external_gateway_info": null, "name": "router-8", "admin_state_up": true, "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "distributed": false, "routes": [], "ha": false, "id": "49788461-0962-44c4-aacb-fb3b91a29fae"}}
+
+2015-11-10 20:41:27,238|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/49788461-0962-44c4-aacb-fb3b91a29fae.json -X DELETE -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e"
+
+2015-11-10 20:41:27,239|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:27,352|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2.0/routers/49788461-0962-44c4-aacb-fb3b91a29fae.json HTTP/1.1" 204 0
+2015-11-10 20:41:27,353|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:204 {'date': 'Tue, 10 Nov 2015 15:13:22 GMT', 'content-length': '0', 'x-openstack-request-id': 'req-3be70aba-f791-4b4a-872b-4e8a91192119'} 
+
+2015-11-10 20:41:27,353|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/8681065b-d9fa-4abc-baa5-8db4020cfcc0.json -X PUT -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e" -d '{"router": {"external_gateway_info": {}}}'
+
+2015-11-10 20:41:27,354|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:27,522|DEBUG|19964-MainThread|_make_request connectionpool:360| "PUT /v2.0/routers/8681065b-d9fa-4abc-baa5-8db4020cfcc0.json HTTP/1.1" 200 251
+2015-11-10 20:41:27,523|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:200 {'date': 'Tue, 10 Nov 2015 15:13:22 GMT', 'content-length': '251', 'content-type': 'application/json; charset=UTF-8', 'x-openstack-request-id': 'req-9b29d95d-b693-4ff7-8f3d-8e219a2724b5'} {"router": {"status": "ACTIVE", "external_gateway_info": null, "name": "router-9", "admin_state_up": true, "tenant_id": "d99ab9c5d14f4dd1aa9830f0f70f3fe5", "distributed": false, "routes": [], "ha": false, "id": "8681065b-d9fa-4abc-baa5-8db4020cfcc0"}}
+
+2015-11-10 20:41:27,523|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/routers/8681065b-d9fa-4abc-baa5-8db4020cfcc0.json -X DELETE -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e"
+
+2015-11-10 20:41:27,524|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:27,635|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2.0/routers/8681065b-d9fa-4abc-baa5-8db4020cfcc0.json HTTP/1.1" 204 0
+2015-11-10 20:41:27,636|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:204 {'date': 'Tue, 10 Nov 2015 15:13:22 GMT', 'content-length': '0', 'x-openstack-request-id': 'req-15b1a921-38d6-4fb0-8692-1d75a3686c98'} 
+
+2015-11-10 20:41:27,636|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/subnets/e2e480fb-0c00-45ae-a922-fb2fac7b99ab.json -X DELETE -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e"
+
+2015-11-10 20:41:27,638|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:28,039|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2.0/subnets/e2e480fb-0c00-45ae-a922-fb2fac7b99ab.json HTTP/1.1" 204 0
+2015-11-10 20:41:28,040|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:204 {'date': 'Tue, 10 Nov 2015 15:13:22 GMT', 'content-length': '0', 'x-openstack-request-id': 'req-e47cf161-0202-420a-95eb-2776fa9b6288'} 
+
+2015-11-10 20:41:28,040|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/subnets/7f04af37-2f1d-41ca-b761-02bb76c5cdc6.json -X DELETE -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e"
+
+2015-11-10 20:41:28,042|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:28,162|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2.0/subnets/7f04af37-2f1d-41ca-b761-02bb76c5cdc6.json HTTP/1.1" 204 0
+2015-11-10 20:41:28,163|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:204 {'date': 'Tue, 10 Nov 2015 15:13:22 GMT', 'content-length': '0', 'x-openstack-request-id': 'req-19b49b9e-bdc4-48e1-af44-2353617635fa'} 
+
+2015-11-10 20:41:28,163|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/subnets/7bbe29a8-59e3-4766-a82d-e88867bc88d7.json -X DELETE -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e"
+
+2015-11-10 20:41:28,164|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:28,297|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2.0/subnets/7bbe29a8-59e3-4766-a82d-e88867bc88d7.json HTTP/1.1" 204 0
+2015-11-10 20:41:28,297|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:204 {'date': 'Tue, 10 Nov 2015 15:13:23 GMT', 'content-length': '0', 'x-openstack-request-id': 'req-b8beb21d-e560-498f-8df5-e889d4caeca6'} 
+
+2015-11-10 20:41:28,298|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/subnets/0f86b260-803a-4c7a-b7e1-1d64fa26af82.json -X DELETE -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e"
+
+2015-11-10 20:41:28,299|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:28,440|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2.0/subnets/0f86b260-803a-4c7a-b7e1-1d64fa26af82.json HTTP/1.1" 204 0
+2015-11-10 20:41:28,440|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:204 {'date': 'Tue, 10 Nov 2015 15:13:23 GMT', 'content-length': '0', 'x-openstack-request-id': 'req-f9645c73-c1f0-4d0f-9344-d86e26c302f6'} 
+
+2015-11-10 20:41:28,441|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/subnets/19148108-c192-4d96-be0d-d525c3b995be.json -X DELETE -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e"
+
+2015-11-10 20:41:28,443|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:28,566|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2.0/subnets/19148108-c192-4d96-be0d-d525c3b995be.json HTTP/1.1" 204 0
+2015-11-10 20:41:28,567|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:204 {'date': 'Tue, 10 Nov 2015 15:13:23 GMT', 'content-length': '0', 'x-openstack-request-id': 'req-1cf16a2c-34f9-4e1c-8e4e-921b1bf372d2'} 
+
+2015-11-10 20:41:28,567|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/subnets/59b0adcc-ddca-4c19-a731-c7365c5aa109.json -X DELETE -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e"
+
+2015-11-10 20:41:28,568|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:28,695|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2.0/subnets/59b0adcc-ddca-4c19-a731-c7365c5aa109.json HTTP/1.1" 204 0
+2015-11-10 20:41:28,695|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:204 {'date': 'Tue, 10 Nov 2015 15:13:23 GMT', 'content-length': '0', 'x-openstack-request-id': 'req-78369816-9bc7-49b2-951d-c61c9a08982e'} 
+
+2015-11-10 20:41:28,696|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/subnets/1daf190d-1cc3-4477-8ca2-8acf21146605.json -X DELETE -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e"
+
+2015-11-10 20:41:28,697|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:28,832|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2.0/subnets/1daf190d-1cc3-4477-8ca2-8acf21146605.json HTTP/1.1" 204 0
+2015-11-10 20:41:28,833|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:204 {'date': 'Tue, 10 Nov 2015 15:13:23 GMT', 'content-length': '0', 'x-openstack-request-id': 'req-d81e0588-a105-4028-9103-fbef7d13a038'} 
+
+2015-11-10 20:41:28,833|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/subnets/dfedca7d-34b5-4c38-add7-a6a0d6185a5e.json -X DELETE -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e"
+
+2015-11-10 20:41:28,835|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:28,963|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2.0/subnets/dfedca7d-34b5-4c38-add7-a6a0d6185a5e.json HTTP/1.1" 204 0
+2015-11-10 20:41:28,964|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:204 {'date': 'Tue, 10 Nov 2015 15:13:23 GMT', 'content-length': '0', 'x-openstack-request-id': 'req-5e4bbb09-c419-4f3f-aa21-dc8a7aa59a02'} 
+
+2015-11-10 20:41:28,964|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/subnets/66045977-f796-43e6-8896-e5134dcc7973.json -X DELETE -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e"
+
+2015-11-10 20:41:28,965|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:29,086|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2.0/subnets/66045977-f796-43e6-8896-e5134dcc7973.json HTTP/1.1" 204 0
+2015-11-10 20:41:29,086|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:204 {'date': 'Tue, 10 Nov 2015 15:13:23 GMT', 'content-length': '0', 'x-openstack-request-id': 'req-32f71846-4bff-447d-9738-cccf1641bb0e'} 
+
+2015-11-10 20:41:29,087|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/subnets/d8aca88b-a20f-41bd-891d-db49108fecf4.json -X DELETE -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e"
+
+2015-11-10 20:41:29,088|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:29,216|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2.0/subnets/d8aca88b-a20f-41bd-891d-db49108fecf4.json HTTP/1.1" 204 0
+2015-11-10 20:41:29,216|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:204 {'date': 'Tue, 10 Nov 2015 15:13:24 GMT', 'content-length': '0', 'x-openstack-request-id': 'req-cf532b49-ea7a-4fb0-93f6-51edab38753b'} 
+
+2015-11-10 20:41:29,216|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/networks/90fb38ae-19b6-47e6-b622-35516b56b43e.json -X DELETE -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e"
+
+2015-11-10 20:41:29,217|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:29,448|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2.0/networks/90fb38ae-19b6-47e6-b622-35516b56b43e.json HTTP/1.1" 204 0
+2015-11-10 20:41:29,449|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:204 {'date': 'Tue, 10 Nov 2015 15:13:24 GMT', 'content-length': '0', 'x-openstack-request-id': 'req-a9e128c0-f229-44c3-9dab-8c5b6eeedbf6'} 
+
+2015-11-10 20:41:29,449|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/networks/d2c9c08e-0799-4b5c-8125-8d7d9c8ab2fb.json -X DELETE -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e"
+
+2015-11-10 20:41:29,450|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:29,532|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2.0/networks/d2c9c08e-0799-4b5c-8125-8d7d9c8ab2fb.json HTTP/1.1" 204 0
+2015-11-10 20:41:29,533|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:204 {'date': 'Tue, 10 Nov 2015 15:13:24 GMT', 'content-length': '0', 'x-openstack-request-id': 'req-563d6418-5b4d-4492-8880-e01803baee64'} 
+
+2015-11-10 20:41:29,533|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/networks/32980b6b-3807-4e9e-b87b-48119c527ab3.json -X DELETE -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e"
+
+2015-11-10 20:41:29,534|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:29,612|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2.0/networks/32980b6b-3807-4e9e-b87b-48119c527ab3.json HTTP/1.1" 204 0
+2015-11-10 20:41:29,612|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:204 {'date': 'Tue, 10 Nov 2015 15:13:24 GMT', 'content-length': '0', 'x-openstack-request-id': 'req-e4a025d5-dc9e-4998-ba2f-b661f188e642'} 
+
+2015-11-10 20:41:29,613|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/networks/cdccf7c7-5e7a-4732-a9bf-7d7b19eb8015.json -X DELETE -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e"
+
+2015-11-10 20:41:29,614|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:29,692|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2.0/networks/cdccf7c7-5e7a-4732-a9bf-7d7b19eb8015.json HTTP/1.1" 204 0
+2015-11-10 20:41:29,692|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:204 {'date': 'Tue, 10 Nov 2015 15:13:24 GMT', 'content-length': '0', 'x-openstack-request-id': 'req-9b7a54ed-5610-442d-88f7-397a0fe79db7'} 
+
+2015-11-10 20:41:29,693|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/networks/c077bfbb-71a8-43da-be9d-75e5fc759432.json -X DELETE -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e"
+
+2015-11-10 20:41:29,694|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:29,775|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2.0/networks/c077bfbb-71a8-43da-be9d-75e5fc759432.json HTTP/1.1" 204 0
+2015-11-10 20:41:29,776|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:204 {'date': 'Tue, 10 Nov 2015 15:13:24 GMT', 'content-length': '0', 'x-openstack-request-id': 'req-60e3e50a-d117-4c16-bc68-53f8fb8abff7'} 
+
+2015-11-10 20:41:29,776|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/networks/ef5a0e5c-0c2c-4070-a1da-7a1c2de4f5ea.json -X DELETE -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e"
+
+2015-11-10 20:41:29,777|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:29,936|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2.0/networks/ef5a0e5c-0c2c-4070-a1da-7a1c2de4f5ea.json HTTP/1.1" 204 0
+2015-11-10 20:41:29,937|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:204 {'date': 'Tue, 10 Nov 2015 15:13:24 GMT', 'content-length': '0', 'x-openstack-request-id': 'req-cd62dfca-49ca-4d7c-a18a-08d0370c4e18'} 
+
+2015-11-10 20:41:29,937|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/networks/92714a62-700b-4ea4-8586-9f2d6c413672.json -X DELETE -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e"
+
+2015-11-10 20:41:29,938|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:30,084|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2.0/networks/92714a62-700b-4ea4-8586-9f2d6c413672.json HTTP/1.1" 204 0
+2015-11-10 20:41:30,084|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:204 {'date': 'Tue, 10 Nov 2015 15:13:24 GMT', 'content-length': '0', 'x-openstack-request-id': 'req-9ed7afa9-3afd-4c09-8a88-f4bbdf48a648'} 
+
+2015-11-10 20:41:30,085|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/networks/7be57903-b86c-48d7-b042-568231c78329.json -X DELETE -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e"
+
+2015-11-10 20:41:30,086|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:30,233|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2.0/networks/7be57903-b86c-48d7-b042-568231c78329.json HTTP/1.1" 204 0
+2015-11-10 20:41:30,233|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:204 {'date': 'Tue, 10 Nov 2015 15:13:25 GMT', 'content-length': '0', 'x-openstack-request-id': 'req-803b35e9-65b5-4f7e-9dbc-b4492058c217'} 
+
+2015-11-10 20:41:30,234|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/networks/ff9be446-ec42-418d-96ab-2997baad2fd3.json -X DELETE -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e"
+
+2015-11-10 20:41:30,235|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:30,383|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2.0/networks/ff9be446-ec42-418d-96ab-2997baad2fd3.json HTTP/1.1" 204 0
+2015-11-10 20:41:30,384|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:204 {'date': 'Tue, 10 Nov 2015 15:13:25 GMT', 'content-length': '0', 'x-openstack-request-id': 'req-c3bc439e-4348-4e74-8ba7-77a4962cc3cd'} 
+
+2015-11-10 20:41:30,384|DEBUG|19964-MainThread|http_log_req utils:131| 
+REQ: curl -i http://10.10.10.21:9696/v2.0/networks/81112db6-ebaa-4750-a024-20e8b35c6cb0.json -X DELETE -H "User-Agent: python-neutronclient" -H "X-Auth-Token: 1a4ebcadf77d4ae3a08def164b52d03e"
+
+2015-11-10 20:41:30,385|INFO|19964-MainThread|_new_conn connectionpool:194| Starting new HTTP connection (1): 10.10.10.21
+2015-11-10 20:41:30,608|DEBUG|19964-MainThread|_make_request connectionpool:360| "DELETE /v2.0/networks/81112db6-ebaa-4750-a024-20e8b35c6cb0.json HTTP/1.1" 204 0
+2015-11-10 20:41:30,608|DEBUG|19964-MainThread|http_log_resp utils:140| RESP:204 {'date': 'Tue, 10 Nov 2015 15:13:25 GMT', 'content-length': '0', 'x-openstack-request-id': 'req-aa0f0db1-829a-4088-a3a8-0d45ee8469db'} 
+

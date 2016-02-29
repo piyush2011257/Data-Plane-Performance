@@ -1,0 +1,106 @@
+[piyush@rhel7-34 Data_Plane_Analysis]$ iperf -s
+------------------------------------------------------------
+Server listening on TCP port 5001
+TCP window size: 85.3 KByte (default)
+------------------------------------------------------------
+[  4] local 1.1.1.34 port 5001 connected with 1.1.5.47 port 35381
+[  5] local 1.1.1.34 port 5001 connected with 1.1.5.48 port 40123
+[  6] local 1.1.1.34 port 5001 connected with 1.1.5.49 port 47803
+[  7] local 1.1.1.34 port 5001 connected with 1.1.5.50 port 49825
+[  8] local 1.1.1.34 port 5001 connected with 1.1.5.51 port 34002
+[  9] local 1.1.1.34 port 5001 connected with 1.1.5.52 port 34382
+[ 10] local 1.1.1.34 port 5001 connected with 1.1.5.53 port 34296
+[ 11] local 1.1.1.34 port 5001 connected with 1.1.5.54 port 50388
+[ 12] local 1.1.1.34 port 5001 connected with 1.1.5.55 port 38733
+[ 13] local 1.1.1.34 port 5001 connected with 1.1.5.56 port 38971
+[ 14] local 1.1.1.34 port 5001 connected with 1.1.5.57 port 45882
+[ 15] local 1.1.1.34 port 5001 connected with 1.1.5.58 port 55276
+[ 16] local 1.1.1.34 port 5001 connected with 1.1.5.59 port 40528
+[ 17] local 1.1.1.34 port 5001 connected with 1.1.5.60 port 38376
+[ 18] local 1.1.1.34 port 5001 connected with 1.1.5.61 port 41348
+[ 19] local 1.1.1.34 port 5001 connected with 1.1.5.62 port 38674
+[ 20] local 1.1.1.34 port 5001 connected with 1.1.5.63 port 49813
+[ 21] local 1.1.1.34 port 5001 connected with 1.1.5.64 port 39370
+[ 22] local 1.1.1.34 port 5001 connected with 1.1.5.65 port 36791
+[ 23] local 1.1.1.34 port 5001 connected with 1.1.5.66 port 58916
+[ 24] local 1.1.1.34 port 5001 connected with 1.1.5.67 port 52648
+[ 25] local 1.1.1.34 port 5001 connected with 1.1.5.68 port 36748
+[ 26] local 1.1.1.34 port 5001 connected with 1.1.5.69 port 40566
+[ 27] local 1.1.1.34 port 5001 connected with 1.1.5.70 port 55149
+[ 28] local 1.1.1.34 port 5001 connected with 1.1.5.71 port 48278
+[ 29] local 1.1.1.34 port 5001 connected with 1.1.5.72 port 50121
+[ 30] local 1.1.1.34 port 5001 connected with 1.1.5.73 port 42936
+[ 31] local 1.1.1.34 port 5001 connected with 1.1.5.74 port 38765
+[ 32] local 1.1.1.34 port 5001 connected with 1.1.5.75 port 46603
+[ 33] local 1.1.1.34 port 5001 connected with 1.1.5.76 port 51139
+[ 34] local 1.1.1.34 port 5001 connected with 1.1.5.77 port 33230
+[ 35] local 1.1.1.34 port 5001 connected with 1.1.5.78 port 40734
+[ 36] local 1.1.1.34 port 5001 connected with 1.1.5.79 port 42538
+[ 37] local 1.1.1.34 port 5001 connected with 1.1.5.80 port 34789
+[ 38] local 1.1.1.34 port 5001 connected with 1.1.5.81 port 39613
+[ 39] local 1.1.1.34 port 5001 connected with 1.1.5.82 port 56218
+[ 40] local 1.1.1.34 port 5001 connected with 1.1.5.83 port 51393
+[ 41] local 1.1.1.34 port 5001 connected with 1.1.5.84 port 52692
+[ 42] local 1.1.1.34 port 5001 connected with 1.1.5.85 port 54338
+[ 43] local 1.1.1.34 port 5001 connected with 1.1.5.86 port 51418
+[ 44] local 1.1.1.34 port 5001 connected with 1.1.5.87 port 36705
+[ 45] local 1.1.1.34 port 5001 connected with 1.1.5.88 port 54452
+[ 46] local 1.1.1.34 port 5001 connected with 1.1.5.89 port 57946
+[ 47] local 1.1.1.34 port 5001 connected with 1.1.5.90 port 35310
+[ 48] local 1.1.1.34 port 5001 connected with 1.1.5.91 port 57226
+[ 49] local 1.1.1.34 port 5001 connected with 1.1.5.92 port 57453
+[ 50] local 1.1.1.34 port 5001 connected with 1.1.5.93 port 50873
+[ 51] local 1.1.1.34 port 5001 connected with 1.1.5.94 port 55150
+[ 52] local 1.1.1.34 port 5001 connected with 1.1.5.95 port 47904
+[ 53] local 1.1.1.34 port 5001 connected with 1.1.5.96 port 60330
+[ ID] Interval       Transfer     Bandwidth
+[  5]  0.0-300.2 sec  1.53 GBytes  43.7 Mbits/sec
+[  6]  0.0-300.0 sec   904 MBytes  25.3 Mbits/sec
+[  4]  0.0-300.9 sec  1.35 GBytes  38.6 Mbits/sec
+[  7]  0.0-300.0 sec  1.62 GBytes  46.3 Mbits/sec
+[  8]  0.0-300.1 sec   882 MBytes  24.6 Mbits/sec
+[  9]  0.0-300.0 sec  1.26 GBytes  35.9 Mbits/sec
+[ 10]  0.0-300.3 sec   834 MBytes  23.3 Mbits/sec
+[ 11]  0.0-300.0 sec  1010 MBytes  28.2 Mbits/sec
+[ 12]  0.0-300.3 sec  1.32 GBytes  37.7 Mbits/sec
+[ 13]  0.0-300.0 sec  1.47 GBytes  42.2 Mbits/sec
+[ 14]  0.0-300.0 sec  1.16 GBytes  33.3 Mbits/sec
+[ 15]  0.0-300.2 sec  1.27 GBytes  36.4 Mbits/sec
+[ 16]  0.0-300.1 sec  1.25 GBytes  35.9 Mbits/sec
+[ 17]  0.0-300.0 sec  1.23 GBytes  35.3 Mbits/sec
+[ 19]  0.0-300.0 sec  1.24 GBytes  35.5 Mbits/sec
+[ 18]  0.0-300.6 sec  1.17 GBytes  33.5 Mbits/sec
+[ 20]  0.0-300.0 sec  1.10 GBytes  31.5 Mbits/sec
+[ 21]  0.0-300.0 sec   920 MBytes  25.7 Mbits/sec
+[ 22]  0.0-300.2 sec  1.17 GBytes  33.6 Mbits/sec
+[ 23]  0.0-300.0 sec  1.34 GBytes  38.2 Mbits/sec
+[ 24]  0.0-300.0 sec  1.53 GBytes  43.9 Mbits/sec
+[ 25]  0.0-300.0 sec  1.54 GBytes  44.1 Mbits/sec
+[ 26]  0.0-300.0 sec   902 MBytes  25.2 Mbits/sec
+[ 27]  0.0-300.0 sec  1.28 GBytes  36.6 Mbits/sec
+[ 28]  0.0-300.0 sec   945 MBytes  26.4 Mbits/sec
+[ 29]  0.0-300.1 sec  1.12 GBytes  31.9 Mbits/sec
+[ 30]  0.0-300.0 sec  1.21 GBytes  34.6 Mbits/sec
+[ 32]  0.0-300.0 sec  1.19 GBytes  34.0 Mbits/sec
+[ 31]  0.0-300.4 sec  1.13 GBytes  32.3 Mbits/sec
+[ 33]  0.0-300.3 sec  1.03 GBytes  29.5 Mbits/sec
+[ 34]  0.0-300.1 sec  1.24 GBytes  35.5 Mbits/sec
+[ 35]  0.0-300.0 sec   958 MBytes  26.8 Mbits/sec
+[ 36]  0.0-300.0 sec  1.24 GBytes  35.5 Mbits/sec
+[ 37]  0.0-300.0 sec  1.26 GBytes  36.0 Mbits/sec
+[ 38]  0.0-300.0 sec  1.23 GBytes  35.3 Mbits/sec
+[ 39]  0.0-300.1 sec  1.20 GBytes  34.5 Mbits/sec
+[ 40]  0.0-300.1 sec  1.15 GBytes  33.0 Mbits/sec
+[ 41]  0.0-300.0 sec  1.50 GBytes  42.9 Mbits/sec
+[ 42]  0.0-300.1 sec   856 MBytes  23.9 Mbits/sec
+[ 43]  0.0-300.2 sec  1.42 GBytes  40.6 Mbits/sec
+[ 44]  0.0-300.0 sec  1.17 GBytes  33.5 Mbits/sec
+[ 45]  0.0-300.0 sec  1.22 GBytes  34.8 Mbits/sec
+[ 46]  0.0-300.0 sec  1.07 GBytes  30.6 Mbits/sec
+[ 47]  0.0-300.0 sec  1.55 GBytes  44.4 Mbits/sec
+[ 48]  0.0-300.0 sec  1.19 GBytes  34.1 Mbits/sec
+[ 49]  0.0-300.0 sec  1.56 GBytes  44.6 Mbits/sec
+[ 50]  0.0-300.0 sec  1.00 GBytes  28.7 Mbits/sec
+[ 51]  0.0-300.0 sec  1.62 GBytes  46.4 Mbits/sec
+[ 52]  0.0-300.0 sec  1.23 GBytes  35.3 Mbits/sec
+[ 53]  0.0-300.0 sec  1.25 GBytes  35.9 Mbits/sec

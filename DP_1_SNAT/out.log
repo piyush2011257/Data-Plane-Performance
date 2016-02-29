@@ -1,0 +1,20 @@
+qrouter-1c59cbec-cd4d-43b1-8e3c-82cc2240d0e2:10.20.0.3
+qrouter-1c59cbec-cd4d-43b1-8e3c-82cc2240d0e2 10.20.0.3
+eth0      Link encap:Ethernet  HWaddr FA:16:3E:3E:CE:E5  
+          inet addr:10.20.0.3  Bcast:10.20.0.255  Mask:255.255.255.0
+          inet6 addr: fe80::f816:3eff:fe3e:cee5/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1454  Metric:1
+          RX packets:45 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:31 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:7089 (6.9 KiB)  TX bytes:5059 (4.9 KiB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+

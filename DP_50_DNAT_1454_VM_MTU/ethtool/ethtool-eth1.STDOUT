@@ -1,0 +1,42 @@
+Settings for eth1:
+	Supported ports: [ FIBRE ]
+	Supported link modes:   1000baseT/Full 
+	                        10000baseT/Full 
+	Supported pause frame use: No
+	Supports auto-negotiation: Yes
+	Advertised link modes:  1000baseT/Full 
+	                        10000baseT/Full 
+	Advertised pause frame use: No
+	Advertised auto-negotiation: Yes
+	Speed: 10000Mb/s
+	Duplex: Full
+	Port: Other
+	PHYAD: 0
+	Transceiver: external
+	Auto-negotiation: on
+	Supports Wake-on: umbg
+	Wake-on: g
+	Current message level: 0x00000007 (7)
+			       drv probe link
+	Link detected: yes
+Settings for eth1:
+	Supported ports: [ FIBRE ]
+	Supported link modes:   1000baseT/Full 
+	                        10000baseT/Full 
+	Supported pause frame use: No
+	Supports auto-negotiation: Yes
+	Advertised link modes:  1000baseT/Full 
+	                        10000baseT/Full 
+	Advertised pause frame use: No
+	Advertised auto-negotiation: Yes
+	Speed: 10000Mb/s
+	Duplex: Full
+	Port: Other
+	PHYAD: 0
+	Transceiver: external
+	Auto-negotiation: on
+	Supports Wake-on: umbg
+	Wake-on: g
+	Current message level: 0x00000007 (7)
+			       drv probe link
+	Link detected: yes
